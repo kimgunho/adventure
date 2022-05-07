@@ -30,5 +30,6 @@ module.exports = {
     "no-console": "off", // 콘솔로그를 사용하수 있음
     "@emotion/jsx-import": "off",
     "@emotion/pkg-renaming": "off",
+    "react-hooks/exhaustive-deps": "off",
   },
 };
