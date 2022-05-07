@@ -14,7 +14,7 @@ const S01 = () => {
   const scrollAnimation = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".container",
+        trigger: ".s1Contianer",
         pin: true,
         start: "top top",
         end: "bottom top",
@@ -22,14 +22,18 @@ const S01 = () => {
         markers: false,
       },
     });
-    tl.to(
+    tl.fromTo(
       ".video",
       {
+        width: "30%",
+        y: "50vh",
+      },
+      {
+        width: "80%",
+        y: "-50%",
         onComplete: () => {
           playVideo("vid");
         },
-        width: "80%",
-        y: "-50%",
       },
       0,
     );
@@ -42,7 +46,7 @@ const S01 = () => {
   };
 
   return (
-    <section className="container" css={container}>
+    <section className="s1Contianer" css={container}>
       <div css={box}>
         <h2 css={title}>ADVENTURE FRAME</h2>
         <p css={desc}>We make what you EXACTLY need</p>

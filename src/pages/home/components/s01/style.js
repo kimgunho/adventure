@@ -10,6 +10,7 @@ export const container = css`
   height: 100%;
   background-color: #f7f7f7;
   position: relative;
+  margin-bottom: 100vh;
 `;
 
 export const box = css`
@@ -68,7 +69,6 @@ export const video = css`
   left: 50%;
   top: 50%;
   z-index: 21;
-  transform: translate(-50%, 50vh);
-  width: 30%;
+  transform: translateX(-50%);
   cursor: pointer;
 `;
