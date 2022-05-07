@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <S01 />
-      <section css={test}>ss</section>
+      <section css={test}>sssssss</section>
     </>
   );
 };

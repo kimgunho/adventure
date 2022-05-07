@@ -17,24 +17,23 @@ const S01 = () => {
         trigger: ".container",
         pin: true,
         start: "top top",
-        end: "200% bottom",
+        end: "bottom top",
         scrub: true,
-        markers: true,
+        markers: false,
       },
     });
-    tl.to(".dimmed", { opacity: 1, duration: 2 }, 0);
     tl.to(
       ".video",
       {
         onComplete: () => {
           playVideo("vid");
         },
-        top: "50%",
         width: "80%",
-        duration: 2,
+        y: "-50%",
       },
       0,
     );
+    tl.to(".dimmed", { opacity: 1 }, 0);
   };
 
   const playVideo = vid => {
@@ -43,22 +42,20 @@ const S01 = () => {
   };
 
   return (
-    <>
-      <section className="container" css={container}>
-        <div css={box}>
-          <h2 css={title}>ADVENTURE FRAME</h2>
-          <p css={desc}>We make what you EXACTLY need</p>
-        </div>
-        <div css={sectionDown}>
-          <p>Let’s explore</p>
-          <img src={arrow_down_icon} alt="" />
-        </div>
-        <video id="vid" muted loop css={video} className="video">
-          <source src={VIDEO} type="video/mp4" />
-        </video>
-        <div className="dimmed" css={dimmed} />
-      </section>
-    </>
+    <section className="container" css={container}>
+      <div css={box}>
+        <h2 css={title}>ADVENTURE FRAME</h2>
+        <p css={desc}>We make what you EXACTLY need</p>
+      </div>
+      <div css={sectionDown}>
+        <p>Let’s explore</p>
+        <img src={arrow_down_icon} alt="" />
+      </div>
+      <video id="vid" muted loop css={video} className="video">
+        <source src={VIDEO} type="video/mp4" />
+      </video>
+      <div className="dimmed" css={dimmed} />
+    </section>
   );
 };
 

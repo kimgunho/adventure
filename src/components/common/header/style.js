@@ -11,7 +11,7 @@ export const header = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 20;
+  z-index: 15;
 `;
 
 export const flex = css`

@@ -7,12 +7,15 @@ export const container = css`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  height: 100%;
   background-color: #f7f7f7;
   position: relative;
 `;
 
 export const box = css`
   text-align: center;
+  position: relative;
+  z-index: 20;
   cursor: pointer;
 `;
 
@@ -63,7 +66,9 @@ export const dimmed = css`
 export const video = css`
   position: fixed;
   left: 50%;
-  top: 150%;
-  transform: translate(-50%, -50%);
+  top: 50%;
+  z-index: 21;
+  transform: translate(-50%, 50vh);
   width: 30%;
+  cursor: pointer;
 `;
