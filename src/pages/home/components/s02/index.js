@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import { container, info, project, mainProject, projectList } from "./style";
-import { useEffect } from "react";
+import { container, info, project, mainProject, projectList, line, percentLine } from "./style";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,6 +11,7 @@ import arrow_right_icon from "../../../../assets/images/home/arrow_right_icon.pn
 gsap.registerPlugin(ScrollTrigger);
 
 const S02 = () => {
+  const [containerWidth, setContainerWidth] = useState(0);
   useEffect(() => {
     setTimeout(() => {
       ScrollTrigger.create({
@@ -19,13 +20,19 @@ const S02 = () => {
         end: "bottom 25%",
         scrub: true,
         markers: false,
-        toggleClass: { className: "active", targets: ".info" },
+        toggleClass: { className: "active", targets: [".info", ".line"] },
+        onUpdate: self => {
+          setContainerWidth(self.progress);
+        },
       });
     }, 100);
   }, []);
 
   return (
     <section className="s2Contianer" css={container}>
+      <div className="line" css={line}>
+        <div css={percentLine(containerWidth)} />
+      </div>
       <article css={info} className="info">
         <div>
           <h2>What we do</h2>

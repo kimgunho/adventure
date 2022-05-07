@@ -10,6 +10,29 @@ export const container = css`
   justify-content: center;
 `;
 
+export const line = css`
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 30;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+  }
+`;
+
+export const percentLine = width => css`
+  width: ${width * 100}%;
+  height: 10px;
+  background-color: #f7f7f7;
+  position: absolute;
+  left: 0;
+  top: 0;
+`;
+
 export const info = css`
   background-color: #222;
   padding: 5.625rem;
