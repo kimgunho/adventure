@@ -1,20 +1,17 @@
 /** @jsxImportSource @emotion/react */
-import { container, box, title, desc, sectionDown } from "./style";
+import { test } from "./style";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import S01 from "./components/s01";
 
-import arrow_down_icon from "../../assets/images/home/arrow_down_icon.png";
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   return (
-    <section css={container}>
-      <div css={box}>
-        <h2 css={title}>ADVENTURE FRAME</h2>
-        <p css={desc}>We make what you EXACTLY need</p>
-      </div>
-      <div css={sectionDown}>
-        <p>Let’s explore</p>
-        <img src={arrow_down_icon} alt="" />
-      </div>
-    </section>
+    <>
+      <S01 />
+      <section css={test}>ss</section>
+    </>
   );
 };
 

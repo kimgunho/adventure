@@ -1,15 +1,17 @@
 import { css } from "@emotion/react";
 import { containerPadding } from "../../../assets/styles/common";
 import { FontsatoshiBold } from "../../../assets/styles/fonts";
+import { PC_HOVER } from "../../../assets/styles/mediaQuery";
 
 export const header = css`
   ${containerPadding}
-  position:absolute;
+  position:fixed;
   top: 2.5rem;
   left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 20;
 `;
 
 export const flex = css`
@@ -38,6 +40,14 @@ export const sns = css`
 
   > li {
     margin-left: 1rem;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+
+    ${PC_HOVER} {
+      &:hover {
+        opacity: 1;
+      }
+    }
 
     &:first-of-type {
       margin-left: 0;
