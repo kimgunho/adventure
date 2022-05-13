@@ -17,7 +17,9 @@ import {
 
 const S03 = () => {
   useEffect(() => {
-    scrollAnimation();
+    setTimeout(() => {
+      scrollAnimation();
+    }, 1000);
   }, []);
 
   const scrollAnimation = () => {

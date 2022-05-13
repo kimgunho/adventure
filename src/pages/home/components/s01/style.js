@@ -18,7 +18,11 @@ export const box = css`
   text-align: center;
   position: relative;
   z-index: 20;
-  cursor: pointer;
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   ${PC_HOVER} {
     &:hover {

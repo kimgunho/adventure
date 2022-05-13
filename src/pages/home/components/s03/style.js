@@ -13,6 +13,7 @@ const bannermove = keyframes`
 export const container = css`
   background-color: #f7f7f7;
   position: relative;
+  overflow: hidden;
 `;
 
 export const textFrameContainer = css`
@@ -62,7 +63,6 @@ export const autoSliderWrapper = css`
   border-top: 1px solid #222;
   padding: 2rem 0;
   width: 200%;
-  overflow: hidden;
   animation: ${bannermove} 10s linear infinite;
 `;
 
