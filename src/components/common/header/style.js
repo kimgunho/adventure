@@ -6,12 +6,14 @@ import { PC_HOVER } from "../../../assets/styles/mediaQuery";
 export const header = css`
   ${containerPadding}
   position:fixed;
-  top: 2.5rem;
+  top: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 15;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 0.5rem 5.625rem;
 `;
 
 export const flex = css`

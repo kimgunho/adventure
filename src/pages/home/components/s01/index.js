@@ -1,10 +1,11 @@
 /** @jsxImportSource @emotion/react */
-import { container, box, title, desc, sectionDown, dimmed, video } from "./style";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 
 import arrow_down_icon from "../../../../assets/images/home/arrow_down_icon.png";
 import VIDEO from "../../../../assets/video/home.mp4";
+
+import { container, box, title, desc, sectionDown, dimmed, video } from "./style";
 
 const S01 = () => {
   useEffect(() => {

@@ -9,13 +9,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   return (
-    <>
+    <div>
       <S01 />
       <S02 />
       <div css={test}>
         <h3>sdasda;osida;osidj;oaishd;ah</h3>
       </div>
-    </>
+    </div>
   );
 };
 
