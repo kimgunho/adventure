@@ -28,7 +28,7 @@ const S03 = () => {
         start: "10% center",
         end: "center+=100px center",
         scrub: true,
-        markers: true,
+        markers: false,
       },
     });
     tl.to(".text01", { width: "auto" }, 0);

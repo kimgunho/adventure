@@ -11,7 +11,7 @@ export const container = css`
   height: 100%;
   background-color: #f7f7f7;
   position: relative;
-  margin-bottom: 100vh;
+  /* margin-bottom: 100vh; */
 `;
 
 export const box = css`
