@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import { Fontanton, FontsatoshiBold, FontsatoshiRegular } from "../../../../assets/styles/fonts";
 import { bounce } from "../../../../assets/styles/animaition";
+import { PC_HOVER } from "../../../../assets/styles/mediaQuery";
 
 export const container = css`
   display: flex;
@@ -18,17 +19,53 @@ export const box = css`
   position: relative;
   z-index: 20;
   cursor: pointer;
+
+  ${PC_HOVER} {
+    &:hover {
+      .en {
+        opacity: 0;
+        transform: translateY(0%);
+      }
+      .ko {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
 `;
 
 export const title = css`
   font-size: 10vw;
-  letter-spacing: 1rem;
   color: #000;
   text-shadow: 10px 10px 30px #0000008a;
-  ${Fontanton}
+  position: relative;
+
+  > span {
+    transition: all 0.5s ease;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+`;
+
+export const en = css`
+  letter-spacing: 1rem;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  ${Fontanton};
+`;
+
+export const ko = css`
+  letter-spacing: 2rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-80%, -80%);
 `;
 
 export const desc = css`
+  display: block;
+  letter-spacing: 0px;
   font-size: 1.5rem;
   color: #000;
   ${FontsatoshiBold}

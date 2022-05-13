@@ -30,7 +30,7 @@ const S02 = () => {
           start: "top top",
           end: `bottom bottom-=90px`,
           scrub: true,
-          markers: true,
+          markers: false,
           toggleClass: { className: "active", targets: [".info", ".line", ".infoDesc"] },
           onUpdate: self => {
             setContainerWidth(self.progress);

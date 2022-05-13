@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import arrow_down_icon from "../../../../assets/images/home/arrow_down_icon.png";
 import VIDEO from "../../../../assets/video/home.mp4";
 
-import { container, box, title, desc, sectionDown, dimmed, video } from "./style";
+import { container, box, title, desc, sectionDown, dimmed, video, en, ko } from "./style";
 
 const S01 = () => {
   useEffect(() => {
@@ -49,8 +49,16 @@ const S01 = () => {
   return (
     <section className="s1Contianer" css={container}>
       <div css={box}>
-        <h2 css={title}>ADVENTURE FRAME</h2>
-        <p css={desc}>We make what you EXACTLY need</p>
+        <h2 className="title" css={title}>
+          <span className="en" css={en}>
+            ADVENTURE FRAME
+            <span css={desc}>We make what you EXACTLY need</span>
+          </span>
+          <span className="ko" css={ko}>
+            어드벤처프레임
+            <span css={desc}>당신이 필요한 바로 그 영상을 만듭니다</span>
+          </span>
+        </h2>
       </div>
       <div css={sectionDown}>
         <p>Let’s explore</p>

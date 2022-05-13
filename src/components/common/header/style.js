@@ -12,7 +12,6 @@ export const header = css`
   justify-content: space-between;
   align-items: center;
   z-index: 15;
-  background-color: rgba(255, 255, 255, 0.25);
   padding: 0.5rem 5.625rem;
 `;
 
