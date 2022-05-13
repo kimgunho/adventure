@@ -92,6 +92,7 @@ export const project = css`
   width: calc(100% - 45rem);
   padding: 1rem;
   box-sizing: border-box;
+  background-color: #f7f7f7;
 `;
 
 export const mainProject = css`
