@@ -38,15 +38,21 @@ export const info = css`
   background-color: #222;
   padding: 5.625rem;
   flex-direction: column;
-  width: 45rem;
+  width: 40%;
   box-sizing: border-box;
   border-radius: 0 1rem 0 0;
   position: relative;
 
+  > div {
+    width: 100%;
+    max-width: 33.75rem;
+  }
+
   &.active {
     > div {
       position: fixed;
-      top: 5.625rem;
+      /* top: 5.625rem; */
+      top: 12.625rem;
       width: 33.75rem;
       bottom: 5.625rem;
     }
@@ -89,7 +95,7 @@ export const linkButton = css`
 `;
 
 export const project = css`
-  width: calc(100% - 45rem);
+  width: 60%;
   padding: 1rem;
   box-sizing: border-box;
   background-color: #f7f7f7;

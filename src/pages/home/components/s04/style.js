@@ -4,19 +4,31 @@ import { PC_HOVER } from "../../../../assets/styles/mediaQuery";
 
 const changeBackgroundImage = imageArr => keyframes`
 0%{
-    background-image:url(${imageArr[0]});
+  background-image:url(${imageArr[0]});
+}
+1%{
+  background-image:url(${imageArr[1]});
 }
 25%{
-    background-image:url(${imageArr[1]});
+  background-image:url(${imageArr[1]});
+}
+26%{
+  background-image:url(${imageArr[2]});
 }
 50%{
-    background-image:url(${imageArr[2]});
+  background-image:url(${imageArr[2]});
+}
+51%{
+  background-image:url(${imageArr[3]});
 }
 75%{
-    background-image:url(${imageArr[3]});
+  background-image:url(${imageArr[3]});
+}
+76%{
+  background-image:url(${imageArr[0]});
 }
 100%{
-    background-image:url(${imageArr[0]});
+  background-image:url(${imageArr[0]});  
 }
 `;
 
@@ -80,7 +92,7 @@ export const button = imageListArr => css`
       text-decoration: underline;
       > div {
         display: block;
-        animation: ${changeBackgroundImage(imageListArr)} 5s linear infinite;
+        animation: ${changeBackgroundImage(imageListArr)} 3s linear infinite;
       }
     }
   }
@@ -99,18 +111,6 @@ export const backgroundCSS = css`
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0.4;
   display: none;
-`;
-
-export const frame = css`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 51rem;
-  height: 100%;
-  max-height: 29rem;
-  z-index: 1;
-  background-color: #444;
 `;

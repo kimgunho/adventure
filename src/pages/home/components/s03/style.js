@@ -29,7 +29,7 @@ export const title = css`
 `;
 
 export const rightText = css`
-  font-size: 4.25rem;
+  font-size: 5rem;
   color: #222;
   line-height: 1.8;
   font-weight: 600;
@@ -37,12 +37,16 @@ export const rightText = css`
   white-space: nowrap;
   display: inline-block;
   width: 100%;
-  height: 6.25rem;
+  height: 8rem;
 
   > span {
     position: absolute;
     white-space: nowrap;
   }
+`;
+
+export const marginDown = css`
+  margin-bottom: 4rem;
 `;
 
 export const realText = css`

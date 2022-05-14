@@ -9,6 +9,7 @@ import {
   textFrameContainer,
   title,
   rightText,
+  marginDown,
   autoSliderWrapper,
   slideCSS,
   frame,
@@ -57,14 +58,12 @@ const S03 = () => {
           </span>
           <span css={frame}>사람들이 좋아하는 광고를 만드는</span>
         </p>
-        <p css={rightText}>
+        <p css={[rightText, marginDown]}>
           <span className="text03" css={realText}>
             가장 좋은 방법
           </span>
           <span css={frame}>가장 좋은 방법</span>
         </p>
-        <br />
-        <br />
         <p css={rightText}>
           <span className="text04" css={realText}>
             거침 없는 연출, 세심한 제작
@@ -85,7 +84,7 @@ const S03 = () => {
         </p>
       </div>
       <div css={autoSliderWrapper}>
-        {Array.from(Array(6)).map((_, index) => (
+        {Array.from(Array(8)).map((_, index) => (
           <div key={index} css={slideCSS}>
             <img src={authImage} alt="" />
           </div>

@@ -2,9 +2,6 @@
 import { Link } from "react-router-dom";
 
 import header_logo from "../../../assets/images/header/logo.png";
-import youtube_icon from "../../../assets/images/header/youtube_icon.png";
-import insta_icon from "../../../assets/images/header/insta_icon.png";
-import kakao_icon from "../../../assets/images/header/kakao_icon.png";
 
 import { header, flex, menuButton, sns } from "./style";
 const Header = () => {
@@ -21,19 +18,13 @@ const Header = () => {
       <nav>
         <ul css={sns}>
           <li>
-            <a href="" target={"_blank"}>
-              <img src={youtube_icon} alt="유튜브 바로가기" />
-            </a>
+            <a href="" target={"_blank"}></a>
           </li>
           <li>
-            <a href="" target={"_blank"}>
-              <img src={insta_icon} alt="인스타 바로가기" />
-            </a>
+            <a href="" target={"_blank"}></a>
           </li>
           <li>
-            <a href="" target={"_blank"}>
-              <img src={kakao_icon} alt="카카오톡 바로가기" />
-            </a>
+            <a href="" target={"_blank"}></a>
           </li>
         </ul>
       </nav>

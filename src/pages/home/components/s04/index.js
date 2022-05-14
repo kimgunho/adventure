@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 import { backgroundObj } from "./constants";
-import { container, title, nav, buttons, button, backgroundCSS, frame } from "./style";
+import { container, title, nav, buttons, button, backgroundCSS } from "./style";
 const S04 = () => {
   return (
     <section css={container}>
@@ -41,7 +41,6 @@ const S04 = () => {
           </li>
         </ul>
       </nav>
-      <div css={frame} />
     </section>
   );
 };

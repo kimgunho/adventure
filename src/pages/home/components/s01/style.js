@@ -11,7 +11,6 @@ export const container = css`
   height: 100%;
   background-color: #f7f7f7;
   position: relative;
-  /* margin-bottom: 100vh; */
 `;
 
 export const box = css`
@@ -19,7 +18,8 @@ export const box = css`
   position: relative;
   z-index: 20;
   width: 100%;
-  height: 50rem;
+  height: 20rem;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,20 +28,17 @@ export const box = css`
     &:hover {
       .en {
         opacity: 0;
-        transform: translateY(0%);
       }
       .ko {
         opacity: 1;
-        transform: translate(-50%, -50%);
       }
     }
   }
 `;
 
 export const title = css`
-  font-size: 10vw;
+  font-size: 12vw;
   color: #000;
-  text-shadow: 10px 10px 30px #0000008a;
   position: relative;
 
   > span {
@@ -49,22 +46,22 @@ export const title = css`
     position: absolute;
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%);
   }
 `;
 
 export const en = css`
   letter-spacing: 1rem;
   white-space: nowrap;
-  transform: translate(-50%, -50%);
   ${Fontanton};
 `;
 
 export const ko = css`
-  letter-spacing: 2rem;
+  letter-spacing: 5rem;
   font-weight: 600;
+  font-size: 9vw;
   white-space: nowrap;
   opacity: 0;
-  transform: translate(-80%, -80%);
 `;
 
 export const desc = css`
@@ -72,7 +69,7 @@ export const desc = css`
   letter-spacing: 0px;
   font-size: 1.5rem;
   color: #000;
-  ${FontsatoshiBold}
+  ${FontsatoshiBold};
 `;
 
 export const sectionDown = css`
