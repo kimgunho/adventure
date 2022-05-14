@@ -10,31 +10,31 @@ const S04 = () => {
       <nav css={nav}>
         <ul css={buttons}>
           <li>
-            <Link to="/" css={button(backgroundObj.brandFilm)}>
+            <Link to="/project/brand" css={button(backgroundObj.brandFilm)}>
               Brand film
               <div css={backgroundCSS} />
             </Link>
           </li>
           <li>
-            <Link to="/" css={button(backgroundObj.commercialFilm)}>
+            <Link to="/project/commercial" css={button(backgroundObj.commercialFilm)}>
               Commercial film
               <div css={backgroundCSS} />
             </Link>
           </li>
           <li>
-            <Link to="/" css={button(backgroundObj.viralVideo)}>
+            <Link to="/project/viral" css={button(backgroundObj.viralVideo)}>
               Viral video
               <div css={backgroundCSS} />
             </Link>
           </li>
           <li>
-            <Link to="/ss" css={button(backgroundObj.youtube)}>
+            <Link to="/project/youtube" css={button(backgroundObj.youtube)}>
               Youtube
               <div css={backgroundCSS} />
             </Link>
           </li>
           <li>
-            <Link to="/" css={button(backgroundObj.others)}>
+            <Link to="/project/others" css={button(backgroundObj.others)}>
               Others
               <div css={backgroundCSS} />
             </Link>

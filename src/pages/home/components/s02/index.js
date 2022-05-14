@@ -53,14 +53,14 @@ const S02 = () => {
             바탕으로 한 단계 더 설득력 있는 광고를 만듭니다. 우리의 포트폴리오를 확인하세요! 당신이
             원하는 영상이 여기에 없다고요? 그럼 같이 만들어보죠 뭐.
           </p>
-          <Link to="/" css={linkButton}>
+          <Link to="/project/all" css={linkButton}>
             MORE WORKS <img src={arrow_right_icon} alt="" />
           </Link>
         </div>
       </article>
       <article css={project} className="project">
         <div css={mainProject}>
-          <Link to="/ss">
+          <Link to="/project/brand/1">
             <div>
               <img src={mainData.image} alt="" />
               <p>{mainData.kind}</p>
@@ -71,7 +71,7 @@ const S02 = () => {
         <ul css={projectList}>
           {data.map((item, index) => (
             <li key={index}>
-              <Link to="/ss">
+              <Link to="/project/brand/1">
                 <div>
                   <img src={item.image} alt={item.title} />
                   <p>{item.kind}</p>
