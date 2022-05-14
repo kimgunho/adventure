@@ -6,6 +6,7 @@ import S01 from "./components/s01";
 import S02 from "./components/s02";
 import S03 from "./components/s03";
 import S04 from "./components/s04";
+import S05 from "./components/s05";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +17,7 @@ const Home = () => {
       <S02 />
       <S03 />
       <S04 />
-      <div style={{ height: "100vh" }}>빈페이지</div>
+      <S05 />
     </div>
   );
 };

@@ -77,6 +77,7 @@ export const buttons = css`
 export const button = imageListArr => css`
   ${PC_HOVER} {
     &:hover {
+      text-decoration: underline;
       > div {
         display: block;
         animation: ${changeBackgroundImage(imageListArr)} 5s linear infinite;
