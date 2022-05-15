@@ -3,9 +3,9 @@ import { Fontanton, FontsatoshiBold } from "../../../assets/styles/fonts";
 import { PC_HOVER } from "../../../assets/styles/mediaQuery";
 
 export const menuWrapper = css`
-  background-color: #661ccc;
+  background-image: linear-gradient(130deg, #6820cc, #8853d1);
   min-height: 100vh;
-  z-index: 30;
+  z-index: 50;
   position: fixed;
   left: 0;
   top: 0;

@@ -7,42 +7,34 @@ export const footerWrapper = css`
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 `;
 
 export const companyTitleContainer = css`
-  width: 50%;
-
   > h2 {
-    margin-bottom: 1rem;
-    > img {
-    }
+    color: #fff;
+    font-size: 3.125rem;
+    padding-bottom: 2rem;
+    ${FontsatoshiBold};
   }
   > p {
     color: #fff;
     font-size: 0.875rem;
     ${FontsatoshiRegular};
+
+    > span {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.875rem;
+    }
   }
 `;
 
 export const companyCSContainer = css`
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const socialContainer = css`
-  > h3 {
-    font-size: 1.125rem;
-    color: #fff;
-    ${FontsatoshiBold};
-    margin-bottom: 1rem;
-  }
-
   > ul {
     display: flex;
     align-items: center;
+    margin-bottom: 3rem;
 
     > li {
       margin-right: 1.25rem;
@@ -51,15 +43,6 @@ export const socialContainer = css`
         margin-right: 0;
       }
     }
-  }
-`;
-
-export const officeInfoContainer = css`
-  > h3 {
-    font-size: 1.125rem;
-    color: #fff;
-    ${FontsatoshiBold};
-    margin-bottom: 1rem;
   }
 
   > a {
@@ -71,5 +54,6 @@ export const officeInfoContainer = css`
   > p {
     color: #fff;
     font-size: 0.875rem;
+    padding-bottom: 0.5rem;
   }
 `;
