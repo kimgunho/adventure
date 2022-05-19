@@ -9,7 +9,7 @@ import youtube_icon_color from "../../../assets/images/header/youtube_icon_color
 import insta_icon_color from "../../../assets/images/header/insta_icon_color.png";
 import kakao_icon_color from "../../../assets/images/header/kakao_icon_color.png";
 
-export const header = css`
+export const header = isBackground => css`
   position: fixed;
   top: 0;
   left: 0;
@@ -21,7 +21,8 @@ export const header = css`
   height: 7.5rem;
   box-sizing: border-box;
   padding: 0 5.625rem;
-  background-color: #f7f7f7;
+  transition: background-color 0.2s ease;
+  background-color: ${isBackground ? "#f7f7f7" : "transparent"};
 `;
 
 export const flex = css`

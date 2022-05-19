@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import header_logo from "../../../assets/images/header/logo.png";
@@ -9,6 +9,22 @@ import Menu from "../menu";
 import { header, flex, menuButton, sns } from "./style";
 const Header = () => {
   const [isClick, setIsClick] = useState(false);
+  const [isBackgroundColor, setIsBackgroundColor] = useState(false);
+
+  useEffect(() => {
+    setHeaderBackgroundColor();
+  }, []);
+
+  const setHeaderBackgroundColor = () => {
+    window.addEventListener("scroll", () => {
+      const { scrollY } = window;
+      if (scrollY >= 120) {
+        setIsBackgroundColor(true);
+      } else {
+        setIsBackgroundColor(false);
+      }
+    });
+  };
 
   const handleShowMenu = () => {
     setIsClick(true);
@@ -16,7 +32,7 @@ const Header = () => {
 
   return (
     <>
-      <header css={header}>
+      <header css={header(isBackgroundColor)} className="header">
         <div css={flex}>
           <h1>
             <Link to="/">
