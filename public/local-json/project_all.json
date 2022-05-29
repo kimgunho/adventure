@@ -77,7 +77,8 @@
       "client": "LG전자",
       "type": "MUSIC VIDEO",
       "staff": "Sang Jun Lee",
-      "youtube": "3UhUYqJkWGw"
+      "youtube": "3UhUYqJkWGw",
+      "images": ["../images/dummy_test01.jpg", "../images/dummy_test01.jpg"]
     },
     {
       "id": 7,
@@ -88,7 +89,8 @@
       "client": "LG전자",
       "type": "MUSIC VIDEO",
       "staff": "Sang Jun Lee",
-      "youtube": "3UhUYqJkWGw"
+      "youtube": "3UhUYqJkWGw",
+      "images": ["../images/dummy_test01.jpg", "../images/dummy_test01.jpg"]
     },
     {
       "id": 8,

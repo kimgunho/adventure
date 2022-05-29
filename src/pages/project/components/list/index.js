@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /** @jsxImportSource @emotion/react */
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -95,6 +94,8 @@ const List = () => {
     }
     setCount(prev => prev + 8);
   };
+
+  console.log(data[4]?.images);
   return (
     <main css={wrapper}>
       <section css={headerContainer}>
