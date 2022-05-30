@@ -95,7 +95,6 @@ const List = () => {
     setCount(prev => prev + 8);
   };
 
-  console.log(data[4]?.images);
   return (
     <main css={wrapper}>
       <section css={headerContainer}>

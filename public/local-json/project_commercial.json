@@ -1,49 +1,83 @@
 {
+  "main": {
+    "id": 0,
+    "title": "main TWIN WASH 세탁기 바이럴광고",
+    "year": "2021",
+    "category": "commercial",
+    "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
+    "client": "LG전자",
+    "type": "MUSIC VIDEO",
+    "staff": "Sang Jun Lee",
+    "youtube": "hOroi5v39HE"
+  },
   "data": [
     {
       "id": 1,
       "title": "TWIN WASH 세탁기 바이럴광고",
       "year": "2021",
-      "category": "viral",
+      "category": "commercial",
       "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
       "client": "LG전자",
       "type": "MUSIC VIDEO",
       "staff": "Sang Jun Lee",
-      "youtube": "a0fJ0dvYB6A",
-      "mainDisplay": true
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
     },
     {
       "id": 2,
       "title": "TWIN WASH 세탁기 바이럴광고",
       "year": "2021",
-      "category": "brand",
+      "category": "commercial",
       "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
       "client": "LG전자",
       "type": "MUSIC VIDEO",
       "staff": "Sang Jun Lee",
-      "youtube": "a0fJ0dvYB6A"
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
     },
     {
       "id": 3,
       "title": "TWIN WASH 세탁기 바이럴광고",
       "year": "2021",
-      "category": "others",
+      "category": "commercial",
       "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
       "client": "LG전자",
       "type": "MUSIC VIDEO",
       "staff": "Sang Jun Lee",
-      "youtube": "a0fJ0dvYB6A"
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
     },
     {
       "id": 4,
       "title": "TWIN WASH 세탁기 바이럴광고",
       "year": "2021",
-      "category": "youtube",
+      "category": "commercial",
       "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
       "client": "LG전자",
       "type": "MUSIC VIDEO",
       "staff": "Sang Jun Lee",
-      "youtube": "a0fJ0dvYB6A"
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
     },
     {
       "id": 5,
@@ -54,62 +88,217 @@
       "client": "LG전자",
       "type": "MUSIC VIDEO",
       "staff": "Sang Jun Lee",
-      "youtube": "a0fJ0dvYB6A"
-    },
-    {
-      "id": 6,
-      "title": "TWIN WASH 세탁기 바이럴광고",
-      "year": "2021",
-      "category": "viral",
-      "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
-      "client": "LG전자",
-      "type": "MUSIC VIDEO",
-      "staff": "Sang Jun Lee",
-      "youtube": "a0fJ0dvYB6A"
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
     },
     {
       "id": 7,
       "title": "TWIN WASH 세탁기 바이럴광고",
       "year": "2021",
-      "category": "viral",
+      "category": "commercial",
       "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
       "client": "LG전자",
       "type": "MUSIC VIDEO",
       "staff": "Sang Jun Lee",
-      "youtube": "a0fJ0dvYB6A"
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
     },
     {
       "id": 8,
       "title": "TWIN WASH 세탁기 바이럴광고",
       "year": "2021",
-      "category": "viral",
+      "category": "commercial",
       "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
       "client": "LG전자",
       "type": "MUSIC VIDEO",
       "staff": "Sang Jun Lee",
-      "youtube": "a0fJ0dvYB6A"
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
     },
     {
       "id": 9,
       "title": "TWIN WASH 세탁기 바이럴광고",
       "year": "2021",
-      "category": "viral",
+      "category": "commercial",
       "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
       "client": "LG전자",
       "type": "MUSIC VIDEO",
       "staff": "Sang Jun Lee",
-      "youtube": "a0fJ0dvYB6A"
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
     },
     {
       "id": 10,
       "title": "TWIN WASH 세탁기 바이럴광고",
       "year": "2021",
-      "category": "viral",
+      "category": "commercial",
       "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
       "client": "LG전자",
       "type": "MUSIC VIDEO",
       "staff": "Sang Jun Lee",
-      "youtube": "a0fJ0dvYB6A"
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "TWIN WASH 세탁기 바이럴광고",
+      "year": "2021",
+      "category": "commercial",
+      "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
+      "client": "LG전자",
+      "type": "MUSIC VIDEO",
+      "staff": "Sang Jun Lee",
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "TWIN WASH 세탁기 바이럴광고",
+      "year": "2021",
+      "category": "commercial",
+      "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
+      "client": "LG전자",
+      "type": "MUSIC VIDEO",
+      "staff": "Sang Jun Lee",
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "TWIN WASH 세탁기 바이럴광고",
+      "year": "2021",
+      "category": "commercial",
+      "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
+      "client": "LG전자",
+      "type": "MUSIC VIDEO",
+      "staff": "Sang Jun Lee",
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "TWIN WASH 세탁기 바이럴광고",
+      "year": "2021",
+      "category": "commercial",
+      "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
+      "client": "LG전자",
+      "type": "MUSIC VIDEO",
+      "staff": "Sang Jun Lee",
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "TWIN WASH 세탁기 바이럴광고",
+      "year": "2021",
+      "category": "commercial",
+      "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
+      "client": "LG전자",
+      "type": "MUSIC VIDEO",
+      "staff": "Sang Jun Lee",
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "TWIN WASH 세탁기 바이럴광고",
+      "year": "2021",
+      "category": "commercial",
+      "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
+      "client": "LG전자",
+      "type": "MUSIC VIDEO",
+      "staff": "Sang Jun Lee",
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "TWIN WASH 세탁기 바이럴광고",
+      "year": "2021",
+      "category": "commercial",
+      "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
+      "client": "LG전자",
+      "type": "MUSIC VIDEO",
+      "staff": "Sang Jun Lee",
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "TWIN WASH 세탁기 바이럴광고",
+      "year": "2021",
+      "category": "commercial",
+      "desc": "전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드를 만들어 공감대를 극대화 시키고 리드미컬한 편집으로 속도감을 주어 지루하지 않고 끝까지 볼 수있는 광고를 완성하였습니다. 전시와 광고 콜라보를 완벽하게 구현하기 위해 미술작가, 디자이너, 기획팀 등등 각 분야의 프로들이 모여 심도있는 작업하였습니다. 잘못된 세탁으로 생긴 현실적인 에피소드",
+      "client": "LG전자",
+      "type": "MUSIC VIDEO",
+      "staff": "Sang Jun Lee",
+      "youtube": "hOroi5v39HE",
+      "images": [
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg",
+        "../../images/commercial/dummy_test01.jpg"
+      ]
     }
   ]
 }
