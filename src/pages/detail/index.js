@@ -8,6 +8,8 @@ import playButtonImage from "../../assets/images/detail/playIcon.png";
 import arrowLeft from "../../assets/images/detail/arrow_left.svg";
 import arrowRight from "../../assets/images/detail/arrow_right.svg";
 
+import SimilarProjectsArr from "./components/similarProjectArr";
+
 import {
   wrapper,
   detailHeader,
@@ -31,6 +33,7 @@ const settings = {
 const Detail = () => {
   const params = useParams();
   const [detail, setDetail] = useState({});
+  const [moreData, setMoreData] = useState([]);
   const [state, setState] = useState({ category: "", url: "" });
   const sliderContainerRef = useRef();
 
@@ -67,8 +70,10 @@ const Detail = () => {
   const fetchProject = async () => {
     const response = await axios.get(state.url);
     const { main, data } = await response.data;
+    const filterData = await data.filter((item, index) => index < 4);
     const currentData = await data.filter(item => item.id === Number(params.id));
     Number(params.id) === 0 ? setDetail(main) : setDetail(currentData[0]);
+    setMoreData(filterData);
   };
 
   return (
@@ -137,6 +142,7 @@ const Detail = () => {
           </button>
         </div>
       </section>
+      <SimilarProjectsArr project={moreData} category={state.category} moreSrc={params.kind} />
     </main>
   );
 };
