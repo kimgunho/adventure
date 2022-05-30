@@ -31,15 +31,17 @@ export const imageBox = css`
   > img {
     width: 100%;
   }
-  > button {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    background-color: transparent;
-    border: 0;
-    border-radius: 50%;
-    cursor: pointer;
-  }
+`;
+
+export const frameButton = active => css`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: ${active ? "none" : "block"};
 `;
 
 export const info = css`

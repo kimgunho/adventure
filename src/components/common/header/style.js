@@ -16,7 +16,7 @@ export const header = isBackground => css`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 15;
+  z-index: 100;
   width: 100%;
   height: 7.5rem;
   box-sizing: border-box;

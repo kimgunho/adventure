@@ -6,16 +6,20 @@ export const showRealWrapper = css`
   position: relative;
 `;
 
-export const frameCSS = css`
+export const frameCSS = active => css`
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 50;
+  display: ${active ? "block" : "none"};
 `;
 
 export const titleCSS = css`
   position: absolute;
+  white-space: nowrap;
+  text-align: center;
   left: 50%;
   top: 35%;
   z-index: 10;
@@ -23,4 +27,33 @@ export const titleCSS = css`
   font-size: 7.5rem;
   color: #fff;
   ${Fontanton};
+`;
+
+export const mainBackground = css`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+`;
+
+export const playButton = active => css`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6.25rem;
+  height: 6.25rem;
+  z-index: 60;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: ${active ? "none" : "block"};
+
+  > img {
+    width: 100%;
+  }
 `;

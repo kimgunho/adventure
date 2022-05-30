@@ -9,6 +9,7 @@ import arrowLeft from "../../assets/images/detail/arrow_left.svg";
 import arrowRight from "../../assets/images/detail/arrow_right.svg";
 
 import SimilarProjectsArr from "./components/similarProjectArr";
+import Frame from "./components/frame";
 
 import {
   wrapper,
@@ -20,6 +21,7 @@ import {
   sliderImageCSS,
   sliderWrapper,
   sliderButton,
+  frameButton,
 } from "./style";
 
 const settings = {
@@ -34,6 +36,7 @@ const Detail = () => {
   const params = useParams();
   const [detail, setDetail] = useState({});
   const [moreData, setMoreData] = useState([]);
+  const [isFrameActive, setIsFrameActive] = useState(false);
   const [state, setState] = useState({ category: "", url: "" });
   const sliderContainerRef = useRef();
 
@@ -84,13 +87,21 @@ const Detail = () => {
       </header>
       <section>
         <div css={imageBox}>
-          <button type="button">
+          <button
+            css={frameButton(isFrameActive)}
+            type="button"
+            onClick={() => setIsFrameActive(true)}
+          >
             <img src={playButtonImage} alt="play video" />
           </button>
-          <img
-            src={`https://img.youtube.com/vi/${detail.youtube}/maxresdefault.jpg`}
-            alt={detail.title}
-          />
+          {isFrameActive ? (
+            <Frame src={detail.youtube} title={detail.title} />
+          ) : (
+            <img
+              src={`https://img.youtube.com/vi/${detail.youtube}/maxresdefault.jpg`}
+              alt={detail.title}
+            />
+          )}
         </div>
         <div css={info}>
           <div css={desc}>
