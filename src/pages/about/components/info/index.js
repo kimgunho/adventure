@@ -1,11 +1,41 @@
 /** @jsxImportSource @emotion/react */
 
+import { useRef } from "react";
+// import emailjs from "@emailjs/browser";
+
 import linkIcon from "../../../../assets/images/about/linkIcon.png";
 import downLoadIcon from "../../../../assets/images/about/downloadIcon.svg";
 import rightIcon from "../../../../assets/images/about/rightIcon.svg";
 
 import { wrapper, topHeader, title, topBody, bottomBody, bottomDesc, bottomForm } from "./style";
 const Info = () => {
+  const formRef = useRef();
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const textRef = useRef();
+
+  // const sendEmail = e => {
+  //   e.preventDefault();
+  //   const value = nameRef.current.value;
+  //   /* eslint-disable */
+  //   const reg_email = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+
+  //   if (!reg_email.test(value)) {
+  //     alert("메일양식이 아닙니다.");
+  //     return false;
+  //   }
+
+  //   emailjs
+  //     .sendForm("service_c1pz9pc", "template_dfxj2vr", formRef.current, "DANFrNV4TKqMu48p7")
+  //     .then(
+  //       alert("감사합니다 빠른 시일내에 답변을 드리겠습니다."),
+  //       (nameRef.current.value = ""),
+  //       error => {
+  //         console.log(error.text);
+  //       },
+  //     );
+  // };
+
   return (
     <>
       <section css={wrapper}>
@@ -78,16 +108,31 @@ const Info = () => {
             </ul>
           </div>
           <div css={bottomForm}>
-            <form>
+            {/* onSubmit={sendEmail} */}
+            <form ref={formRef}>
               <ul>
                 <li>
-                  <input type="text" placeholder="회사/이름은 무엇인가요?" />
+                  <input
+                    name="name"
+                    ref={nameRef}
+                    type="text"
+                    placeholder="회사/이름은 무엇인가요?"
+                  />
                 </li>
                 <li>
-                  <input type="text" placeholder="이메일 주소를 적어주세요." />
+                  <input
+                    name="email"
+                    ref={emailRef}
+                    type="text"
+                    placeholder="이메일 주소를 적어주세요."
+                  />
                 </li>
                 <li>
-                  <textarea placeholder="내용을 간단히 적어주세요. 확인 후 곧 연락 드릴게요!" />
+                  <textarea
+                    name="text"
+                    ref={textRef}
+                    placeholder="내용을 간단히 적어주세요. 확인 후 곧 연락 드릴게요!"
+                  />
                 </li>
               </ul>
               <button>
