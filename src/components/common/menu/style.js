@@ -5,7 +5,7 @@ import { PC_HOVER } from "../../../assets/styles/mediaQuery";
 export const menuWrapper = css`
   background-image: linear-gradient(130deg, #6820cc, #8853d1);
   min-height: 100vh;
-  z-index: 50;
+  z-index: 150;
   position: fixed;
   left: 0;
   top: 0;
