@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
+import axios from "axios";
 
 import arrow_right_icon from "../../../../assets/images/home/arrow_right_icon.png";
 
-import { mainData, data } from "./constants";
 import {
   container,
   info,
@@ -21,6 +21,8 @@ import {
 
 const S02 = () => {
   const [containerWidth, setContainerWidth] = useState(0);
+  const [data, setData] = useState([]);
+  const [mainDisplay, setMainDisplay] = useState({});
 
   useEffect(() => {
     setTimeout(() => {
@@ -39,6 +41,17 @@ const S02 = () => {
       });
     }, 1000);
   }, []);
+
+  useEffect(() => {
+    fetchProject();
+  }, []);
+
+  const fetchProject = async () => {
+    const response = await axios.get("../local-json/main_display.json");
+    const { main, data: mainData } = await response.data;
+    setData(mainData);
+    setMainDisplay(main);
+  };
 
   return (
     <section className="s2Contianer" css={container}>
@@ -62,18 +75,24 @@ const S02 = () => {
         <div css={mainProject}>
           <Link to="/project/brand/1">
             <div>
-              <img src={mainData.image} alt="" />
-              <p>{mainData.kind}</p>
+              <img
+                src={`https://img.youtube.com/vi/${mainDisplay.youtube}/maxresdefault.jpg`}
+                alt=""
+              />
+              <p>{mainDisplay.category}</p>
             </div>
-            <h3>{mainData.title}</h3>
+            <h3>{mainDisplay.title}</h3>
           </Link>
         </div>
         <ul css={projectList}>
-          {data.map((item, index) => (
-            <li key={index}>
+          {data.map(item => (
+            <li key={item.id}>
               <Link to="/project/brand/1">
                 <div>
-                  <img src={item.image} alt={item.title} />
+                  <img
+                    src={`https://img.youtube.com/vi/${item.youtube}/maxresdefault.jpg`}
+                    alt={item.title}
+                  />
                   <p>{item.kind}</p>
                 </div>
                 <h3>{item.title}</h3>

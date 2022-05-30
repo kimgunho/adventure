@@ -28,8 +28,8 @@ const List = () => {
   const navigate = useNavigate();
   const [activeKind, setActiveKind] = useState(params.kind);
   const [count, setCount] = useState(8);
-  const [data, setData] = useState([]);
   const [isScrollEnd, setIsScrollEnd] = useState(false);
+  const [data, setData] = useState([]);
   const [mainDisplay, setMainDisplay] = useState({});
   const [url, setUrl] = useState(params.kind);
 
