@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { Fontanton, FontsatoshiBold, FontsatoshiRegular } from "../../../../assets/styles/fonts";
 import { bounce } from "../../../../assets/styles/animaition";
-import { PC_HOVER } from "../../../../assets/styles/mediaQuery";
+import { PC_HOVER, TABLET, MOBILE } from "../../../../assets/styles/mediaQuery";
 
 export const container = css`
   display: flex;
@@ -11,6 +11,10 @@ export const container = css`
   height: 100%;
   background-color: #f7f7f7;
   position: relative;
+
+  ${TABLET} {
+    display: none;
+  }
 `;
 
 export const box = css`
@@ -47,6 +51,8 @@ export const title = css`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    padding: 0 2rem;
+    box-sizing: border-box;
   }
 `;
 

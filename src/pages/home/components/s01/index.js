@@ -55,11 +55,12 @@ const S01 = () => {
             <span css={desc}>We make what you EXACTLY need</span>
           </span>
           <span className="ko" css={ko}>
-            어드벤처프레임
+            어드벤처 프레임
             <span css={desc}>당신이 필요한 바로 그 영상을 만듭니다</span>
           </span>
         </h2>
       </div>
+
       <div css={sectionDown}>
         <p>Let’s explore</p>
         <img src={arrow_down_icon} alt="" />
@@ -67,6 +68,7 @@ const S01 = () => {
       <video id="vid" muted loop css={video} className="video">
         <source src={VIDEO} type="video/mp4" />
       </video>
+
       <div className="dimmed" css={dimmed} />
     </section>
   );

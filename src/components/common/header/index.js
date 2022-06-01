@@ -3,10 +3,11 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import header_logo from "../../../assets/images/header/logo.png";
+import kakaoButton from "../../../assets/images/header/kakao.png";
 
 import Menu from "../menu";
 
-import { header, flex, menuButton, sns } from "./style";
+import { header, flex, menuButton, sns, mobileKakaoButton } from "./style";
 const Header = () => {
   const [isClick, setIsClick] = useState(false);
   const [isBackgroundColor, setIsBackgroundColor] = useState(false);
@@ -56,6 +57,9 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        <a href="" css={mobileKakaoButton}>
+          <img src={kakaoButton} alt="" />
+        </a>
       </header>
       <Menu active={isClick} setHandleActive={setIsClick} />
     </>

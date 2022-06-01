@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { FontsatoshiBold } from "../../../assets/styles/fonts";
-import { PC_HOVER } from "../../../assets/styles/mediaQuery";
+import { PC_HOVER, TABLET } from "../../../assets/styles/mediaQuery";
 
 import youtube_icon from "../../../assets/images/header/youtube_icon.png";
 import insta_icon from "../../../assets/images/header/insta_icon.png";
@@ -8,6 +8,7 @@ import kakao_icon from "../../../assets/images/header/kakao_icon.png";
 import youtube_icon_color from "../../../assets/images/header/youtube_icon_color.png";
 import insta_icon_color from "../../../assets/images/header/insta_icon_color.png";
 import kakao_icon_color from "../../../assets/images/header/kakao_icon_color.png";
+import kakao_icon_yellow from "../../../assets/images/header/kakao.png";
 
 export const header = isBackground => css`
   position: fixed;
@@ -23,6 +24,10 @@ export const header = isBackground => css`
   padding: 0 5.625rem;
   transition: background-color 0.2s ease;
   background-color: ${isBackground ? "#f7f7f7" : "transparent"};
+
+  ${TABLET} {
+    padding: 0 2rem;
+  }
 `;
 
 export const flex = css`
@@ -31,6 +36,10 @@ export const flex = css`
   align-items: center;
   width: 100%;
   max-width: 16.25rem;
+
+  ${TABLET} {
+    max-width: 100%;
+  }
 `;
 
 export const menuButton = css`
@@ -48,6 +57,10 @@ export const sns = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${TABLET} {
+    display: none;
+  }
 
   > li {
     margin-left: 1rem;
@@ -96,5 +109,18 @@ export const sns = css`
       width: 3.25rem;
       height: 3.25rem;
     }
+  }
+`;
+
+export const mobileKakaoButton = css`
+  width: 8rem;
+  height: 8rem;
+  display: block;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+
+  > img {
+    width: 100%;
   }
 `;
