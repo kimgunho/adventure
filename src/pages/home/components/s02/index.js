@@ -73,7 +73,7 @@ const S02 = () => {
       </article>
       <article css={project} className="project">
         <div css={mainProject}>
-          <Link to="/project/brand/1">
+          <Link to={`/project/${mainDisplay.category}/${mainDisplay.id}`}>
             <div>
               <img
                 src={`https://img.youtube.com/vi/${mainDisplay.youtube}/maxresdefault.jpg`}
@@ -87,7 +87,7 @@ const S02 = () => {
         <ul css={projectList}>
           {data.map(item => (
             <li key={item.id}>
-              <Link to="/project/brand/1">
+              <Link to={`/project/${item.category}/${item.id}`}>
                 <div>
                   <img
                     src={`https://img.youtube.com/vi/${item.youtube}/maxresdefault.jpg`}

@@ -48,7 +48,7 @@ const M02 = () => {
       </article>
       <article css={project}>
         <div css={mainProject}>
-          <Link to="/project/brand/1">
+          <Link to={`/project/${mainDisplay.category}/${mainDisplay.id}`}>
             <div>
               <img
                 src={`https://img.youtube.com/vi/${mainDisplay.youtube}/maxresdefault.jpg`}
@@ -64,7 +64,7 @@ const M02 = () => {
             (item, index) =>
               index < 2 && (
                 <li key={item.id}>
-                  <Link to="/project/brand/1">
+                  <Link to={`/project/${item.category}/${item.id}`}>
                     <div>
                       <img
                         src={`https://img.youtube.com/vi/${item.youtube}/maxresdefault.jpg`}
