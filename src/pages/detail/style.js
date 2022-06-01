@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
-import { FontsatoshiBold, FontsatoshiMedium } from "../../assets/styles/fonts";
+import { extractObject } from "react-slick/lib/utils/innerSliderUtils";
+import { Fontanton, FontsatoshiBold, FontsatoshiMedium } from "../../assets/styles/fonts";
 import { TABLET } from "../../assets/styles/mediaQuery";
 
 export const wrapper = css``;
@@ -187,5 +188,44 @@ export const sliderButton = css`
         padding-left: 0.5rem;
       }
     }
+  }
+`;
+
+export const modal = isModal => css`
+  width: 70%;
+  position: fixed;
+  z-index: 50;
+  left: 50%;
+  top: 50%;
+  border-radius: 2rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  line-height: 0;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  display: ${isModal ? "block" : "none"};
+
+  > img {
+    width: 100%;
+  }
+`;
+
+export const closeButton = css`
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  border: 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  > img {
+    width: 70%;
   }
 `;
