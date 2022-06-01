@@ -5,6 +5,8 @@ import Project from "./pages/project";
 import Detail from "./pages/detail";
 import About from "./pages/about";
 import Footer from "./components/common/footer";
+import NotPage from "./components/common/404";
+import ScrollTop from "./components/common/scrollTop";
 import { Global } from "@emotion/react";
 import { globalStyles } from "./assets/styles/globalStyle";
 
@@ -21,9 +23,10 @@ function App() {
         <Route path="/project/:kind" element={<Project />} />
         <Route path="/project/:kind/:id" element={<Detail />} />
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<div>404</div>} />
+        <Route path="*" element={<NotPage />} />
       </Routes>
       <Footer />
+      <ScrollTop />
     </BrowserRouter>
   );
 }
