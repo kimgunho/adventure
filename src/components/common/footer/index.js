@@ -14,6 +14,11 @@ const Footer = () => {
           Trust us. <br />
           We know what you want.
         </h2>
+        <div>
+          <a href="tel:023321237">+82) 02-332-1237</a>
+          <p>서울특별시 마포구 동교로23길 40, 4층</p>
+          <a href="mailto:sjlee@adventure-f.com">sjlee@adventure-f.com</a>
+        </div>
         <p>
           <img src={footer_logo} alt="" />
           <span>Copyrightⓒ Adeventure Frame Co. All Rights Reserved</span>
@@ -37,6 +42,12 @@ const Footer = () => {
             </a>
           </li>
         </ul>
+        <div>
+          <p>
+            <img src={footer_logo} alt="" />
+            <span>Copyrightⓒ Adeventure Frame Co. All Rights Reserved</span>
+          </p>
+        </div>
         <a href="tel:023321237">+82) 02-332-1237</a>
         <p>서울특별시 마포구 동교로23길 40, 4층</p>
         <a href="mailto:sjlee@adventure-f.com">sjlee@adventure-f.com</a>

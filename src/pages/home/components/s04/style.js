@@ -1,6 +1,6 @@
 import { css, keyframes } from "@emotion/react";
 import { FontsatoshiBlack, FontsatoshiBold } from "../../../../assets/styles/fonts";
-import { PC_HOVER } from "../../../../assets/styles/mediaQuery";
+import { PC_HOVER, TABLET } from "../../../../assets/styles/mediaQuery";
 
 const changeBackgroundImage = imageArr => keyframes`
 0%{
@@ -37,6 +37,12 @@ export const container = css`
   background-color: #222222;
   position: relative;
   min-height: 50vh;
+  overflow: hidden;
+  overflow-x: hidden;
+
+  ${TABLET} {
+    padding: 5rem 2rem;
+  }
 `;
 
 export const title = css`
@@ -64,13 +70,30 @@ export const buttons = css`
   justify-content: center;
   align-items: center;
 
+  ${TABLET} {
+    flex-direction: column;
+  }
+
   > li {
     font-size: 2.5rem;
     color: #fff;
+    white-space: nowrap;
+
+    ${TABLET} {
+      margin-bottom: 2rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
 
     &::after {
       content: "|";
       padding: 0 1rem;
+
+      ${TABLET} {
+        display: none;
+      }
     }
 
     &:last-of-type {

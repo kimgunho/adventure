@@ -20,6 +20,9 @@ export const globalStyles = css`
       font-size: 12px;
     }
   }
+  body {
+    overflow-x: hidden;
+  }
   h1,
   h2,
   h3,

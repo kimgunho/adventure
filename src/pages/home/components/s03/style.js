@@ -1,5 +1,6 @@
 import { css, keyframes } from "@emotion/react";
 import { FontsatoshiBold } from "../../../../assets/styles/fonts";
+import { MOBILE, TABLET } from "../../../../assets/styles/mediaQuery";
 
 const bannermove = keyframes`
   0% {
@@ -19,6 +20,10 @@ export const container = css`
 export const textFrameContainer = css`
   padding: 6.75rem 5.625rem;
   box-sizing: border-box;
+
+  ${TABLET} {
+    padding: 5rem 2rem;
+  }
 `;
 
 export const title = css`
@@ -29,7 +34,7 @@ export const title = css`
 `;
 
 export const rightText = css`
-  font-size: 5rem;
+  font-size: 5vw;
   color: #222;
   line-height: 1.8;
   font-weight: 600;
@@ -37,7 +42,7 @@ export const rightText = css`
   white-space: nowrap;
   display: inline-block;
   width: 100%;
-  height: 8rem;
+  height: 10vw;
 
   > span {
     position: absolute;
@@ -65,15 +70,28 @@ export const autoSliderWrapper = css`
   align-items: center;
   justify-content: center;
   border-top: 1px solid #222;
+  overflow-x: hidden;
+  overflow: hidden;
   padding: 2rem 0;
   width: 200%;
   animation: ${bannermove} 10s linear infinite;
+
+  ${TABLET} {
+    width: 300%;
+  }
+  ${MOBILE} {
+    width: 400%;
+  }
 `;
 
 export const slideCSS = css`
   width: 33.333334%;
   padding: 0 2rem;
   box-sizing: border-box;
+
+  ${TABLET} {
+    width: 50%;
+  }
 
   > img {
     width: 100%;

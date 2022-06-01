@@ -6,65 +6,22 @@ export const container = css`
   min-height: 100vh;
   height: 100%;
   background-color: #f7f7f7;
-  display: flex;
+  display: none;
   position: relative;
   justify-content: center;
 
   ${TABLET} {
-    display: none;
+    display: flex;
+    flex-direction: column;
   }
-`;
-
-export const line = css`
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 30;
-  transition: opacity 0.2s ease;
-  opacity: 0;
-
-  ${TABLET} {
-    display: none;
-  }
-
-  &.active {
-    opacity: 1;
-  }
-`;
-
-export const percentLine = width => css`
-  width: ${width * 100}%;
-  height: 10px;
-  background-color: #f7f7f7;
-  position: absolute;
-  left: 0;
-  top: 0;
 `;
 
 export const info = css`
   background-color: #222;
-  padding: 5.625rem;
+  padding: 5rem 2rem;
   flex-direction: column;
-  width: 40%;
   box-sizing: border-box;
-  border-radius: 0 1rem 0 0;
   position: relative;
-
-  > div {
-    width: 100%;
-    max-width: 33.75rem;
-  }
-
-  &.active {
-    > div {
-      position: fixed;
-      /* top: 5.625rem; */
-      top: 12.625rem;
-      width: 33.75rem;
-      bottom: 5.625rem;
-    }
-  }
 `;
 
 export const title = css`
@@ -78,22 +35,12 @@ export const desc = css`
   font-size: 1.5rem;
   color: #fff;
   line-height: 1.8;
-  opacity: 0;
-  transition: opacity 1s ease;
-  width: 100%;
-  max-width: 30vw;
-
-  &.active {
-    opacity: 1;
-  }
+  margin-bottom: 4rem;
 `;
 
 export const linkButton = css`
-  position: absolute;
-  bottom: 5.625rem;
   display: flex;
   align-items: center;
-  justify-content: center;
   text-decoration: underline;
   font-size: 2.5rem;
   color: #fff;
@@ -105,8 +52,7 @@ export const linkButton = css`
 `;
 
 export const project = css`
-  width: 60%;
-  padding: 1rem;
+  padding: 2rem;
   box-sizing: border-box;
   background-color: #f7f7f7;
 `;
@@ -125,15 +71,7 @@ export const mainProject = css`
 
       > img {
         width: 100%;
-        filter: grayscale(100%);
         object-fit: contain;
-        transition: all 0.2s ease;
-
-        ${PC_HOVER} {
-          &:hover {
-            filter: grayscale(0);
-          }
-        }
       }
       > p {
         position: absolute;
@@ -153,12 +91,10 @@ export const mainProject = css`
 
 export const projectList = css`
   display: flex;
-  flex-wrap: wrap;
   cursor: pointer;
-  justify-content: space-between;
+  flex-direction: column;
 
   > li {
-    width: calc(50% - 0.5rem);
     margin-bottom: 1.5rem;
     > a {
       display: block;
@@ -169,16 +105,8 @@ export const projectList = css`
         overflow: hidden;
 
         > img {
-          filter: grayscale(100%);
           width: 100%;
           object-fit: contain;
-          transition: all 0.2s ease;
-
-          ${PC_HOVER} {
-            &:hover {
-              filter: grayscale(0);
-            }
-          }
         }
         > p {
           position: absolute;
