@@ -41,6 +41,7 @@ export const container = css`
   overflow-x: hidden;
 
   ${TABLET} {
+    min-height: auto;
     padding: 5rem 2rem;
   }
 `;
@@ -63,6 +64,11 @@ export const nav = css`
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
+
+  ${TABLET} {
+    transform: translate(0, 0);
+    position: initial;
+  }
 `;
 
 export const buttons = css`

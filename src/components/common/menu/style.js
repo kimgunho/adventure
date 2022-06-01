@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { Fontanton, FontsatoshiBold } from "../../../assets/styles/fonts";
-import { PC_HOVER } from "../../../assets/styles/mediaQuery";
+import { PC_HOVER, TABLET } from "../../../assets/styles/mediaQuery";
 
 export const menuWrapper = css`
   background-image: linear-gradient(130deg, #6820cc, #8853d1);
@@ -15,6 +15,10 @@ export const menuWrapper = css`
   justify-content: center;
   display: none;
 
+  ${TABLET} {
+    flex-direction: column;
+  }
+
   &.active {
     display: flex;
   }
@@ -26,6 +30,10 @@ export const infoContainer = css`
   border-right: 1px solid #fff;
   display: flex;
   flex-direction: column;
+
+  ${TABLET} {
+    display: none;
+  }
 `;
 
 export const mailList = css`
@@ -33,6 +41,11 @@ export const mailList = css`
   box-sizing: border-box;
   border-bottom: 1px solid #fff;
   height: 70%;
+
+  ${TABLET} {
+    padding: 2rem;
+    height: auto;
+  }
 
   > li {
     color: #fff;
@@ -50,7 +63,6 @@ export const mailList = css`
     > a {
       font-size: 2rem;
       text-decoration: underline;
-      white-space: nowrap;
     }
   }
 `;
@@ -62,6 +74,11 @@ export const companyInfo = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  ${TABLET} {
+    padding: 2rem;
+    height: auto;
+  }
 `;
 
 export const companyInfoTitle = css`
@@ -86,6 +103,13 @@ export const menuContainer = css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${TABLET} {
+    height: auto;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
 `;
 
 export const closeButton = css`
@@ -96,12 +120,24 @@ export const closeButton = css`
   background-color: transparent;
   appearance: none;
   border: 0;
+
+  ${TABLET} {
+    right: 2rem;
+    top: 2rem;
+  }
 `;
 
 export const munuList = css`
   > li {
     display: flex;
     margin-bottom: 4rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+      ${TABLET} {
+        justify-content: center;
+      }
+    }
 
     > span {
       color: #fff;
@@ -115,6 +151,10 @@ export const munuList = css`
       line-height: 1;
       ${Fontanton};
 
+      ${TABLET} {
+        font-size: 5rem;
+      }
+
       ${PC_HOVER} {
         &:hover {
           text-decoration: underline;
@@ -124,6 +164,10 @@ export const munuList = css`
     > ul {
       display: flex;
       padding-left: 3rem;
+
+      ${TABLET} {
+        padding: 0;
+      }
 
       > li {
         margin-right: 1rem;
