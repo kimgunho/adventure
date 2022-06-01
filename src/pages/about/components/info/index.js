@@ -39,7 +39,7 @@ const Info = () => {
   return (
     <>
       <section css={wrapper}>
-        <h3 css={title}>About</h3>
+        <h3 css={title}>Who we are</h3>
         <div css={topHeader}>
           <h4>
             걱정마세요!
@@ -140,6 +140,21 @@ const Info = () => {
                 <img src={rightIcon} alt="" />
               </button>
             </form>
+
+            <ul>
+              <li>
+                <a href="mailto:sjlee@adventure-f.com">
+                  <span>sjlee@adventure-f.com</span>
+                  <img src={linkIcon} alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="" target={"_blank"}>
+                  <span>Kakaotalk channel</span>
+                  <img src={linkIcon} alt="" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import { Fontanton } from "../../../../assets/styles/fonts";
+import { TABLET } from "../../../../assets/styles/mediaQuery";
 
 export const showRealWrapper = css`
   min-height: 100vh;
@@ -27,6 +28,10 @@ export const titleCSS = css`
   font-size: 7.5rem;
   color: #fff;
   ${Fontanton};
+
+  ${TABLET} {
+    font-size: 10vw;
+  }
 `;
 
 export const mainBackground = css`

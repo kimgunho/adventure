@@ -1,9 +1,14 @@
 import { css } from "@emotion/react";
 import { FontsatoshiBlack, FontsatoshiMedium } from "../../../../assets/styles/fonts";
+import { TABLET } from "../../../../assets/styles/mediaQuery";
 
 export const wrapper = css`
   padding: 0 5.625rem;
   box-sizing: border-box;
+
+  ${TABLET} {
+    padding: 0 2rem;
+  }
 `;
 
 export const title = css`
@@ -19,13 +24,25 @@ export const topHeader = css`
   align-items: flex-start;
   justify-content: space-between;
 
+  ${TABLET} {
+    flex-direction: column;
+  }
+
   > h4 {
     font-size: 50px;
     font-weight: 600;
     color: #1f1f1f;
+
+    ${TABLET} {
+      margin-bottom: 3rem;
+    }
   }
   > div {
     width: 50%;
+
+    ${TABLET} {
+      width: 100%;
+    }
     > p {
       font-size: 30px;
       line-height: 1.8;
@@ -43,7 +60,19 @@ export const topBody = css`
   align-items: flex-start;
   padding: 5rem 0;
 
+  ${TABLET} {
+    flex-direction: column;
+  }
+
   > ul {
+    ${TABLET} {
+      order: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3rem;
+      width: 100%;
+    }
     > li {
       > a {
         display: flex;
@@ -54,9 +83,16 @@ export const topBody = css`
           text-decoration: underline;
           color: #1f1f1f;
           ${FontsatoshiMedium};
+
+          ${TABLET} {
+            font-size: 1.8rem;
+          }
         }
         > img {
           margin-left: 1rem;
+          ${TABLET} {
+            width: 3rem;
+          }
         }
       }
     }
@@ -64,6 +100,10 @@ export const topBody = css`
 
   > div {
     width: 50%;
+
+    ${TABLET} {
+      width: 100%;
+    }
     > p {
       font-size: 1.875rem;
       font-weight: 600;
@@ -95,6 +135,10 @@ export const bottomBody = css`
   display: flex;
   justify-content: space-between;
   padding-bottom: 5rem;
+
+  ${TABLET} {
+    flex-direction: column;
+  }
 `;
 
 export const bottomDesc = css`
@@ -104,13 +148,25 @@ export const bottomDesc = css`
   justify-content: space-between;
   align-items: flex-start;
 
+  ${TABLET} {
+    width: 100%;
+  }
+
   > h4 {
     font-size: 50px;
     font-weight: 600;
     color: #1f1f1f;
+    margin-bottom: 3rem;
+
+    @media (max-width: 1600px) {
+      font-size: 2.4rem;
+    }
   }
 
   > ul {
+    ${TABLET} {
+      display: none;
+    }
     > li {
       > a {
         display: flex;
@@ -120,7 +176,12 @@ export const bottomDesc = css`
           font-size: 60px;
           text-decoration: underline;
           color: #1f1f1f;
+          white-space: nowrap;
           ${FontsatoshiMedium};
+
+          @media (max-width: 1600px) {
+            font-size: 2.4rem;
+          }
         }
         > img {
           margin-left: 1rem;
@@ -132,6 +193,10 @@ export const bottomDesc = css`
 
 export const bottomForm = css`
   width: 50%;
+
+  ${TABLET} {
+    width: 100%;
+  }
 
   > form {
     > ul {
@@ -180,6 +245,37 @@ export const bottomForm = css`
       }
       > img {
         width: 4rem;
+      }
+    }
+  }
+
+  > ul {
+    display: none;
+    ${TABLET} {
+      margin-top: 3rem;
+      display: block;
+    }
+    > li {
+      margin-bottom: 2rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        > span {
+          font-size: 2rem;
+          text-decoration: underline;
+          color: #1f1f1f;
+          white-space: nowrap;
+          ${FontsatoshiMedium};
+        }
+        > img {
+          margin-left: 1rem;
+          width: 35px;
+        }
       }
     }
   }

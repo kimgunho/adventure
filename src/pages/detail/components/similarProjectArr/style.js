@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import { FontsatoshiBlack, FontsatoshiBold } from "../../../../assets/styles/fonts";
+import { TABLET } from "../../../../assets/styles/mediaQuery";
 
 export const moreWrapper = css`
   background-color: #f7f7f7;
@@ -19,10 +20,18 @@ export const list = css`
   display: flex;
   justify-content: space-between;
 
+  ${TABLET} {
+    flex-direction: column;
+  }
+
   > li {
     width: 25%;
     padding: 1rem;
     box-sizing: border-box;
+
+    ${TABLET} {
+      width: 100%;
+    }
   }
 `;
 
@@ -39,15 +48,27 @@ export const imageBox = css`
 export const info = css`
   text-align: center;
   margin-top: 1rem;
+  ${TABLET} {
+    text-align: left;
+  }
   > p {
     font-size: 0.875rem;
     color: #1f1f1f;
     line-height: 2;
+
+    ${TABLET} {
+      font-size: 14px;
+      line-height: 3;
+    }
   }
   > h3 {
     font-size: 1.25rem;
     color: #1f1f1f;
     font-weight: 600;
+
+    ${TABLET} {
+      font-size: 1.5rem;
+    }
   }
 `;
 
@@ -61,6 +82,10 @@ export const button = css`
   justify-content: space-between;
   align-items: center;
   font-size: 1.25rem;
+
+  ${TABLET} {
+    padding: 2rem 3rem;
+  }
 
   > span {
     padding-right: 2rem;

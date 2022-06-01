@@ -30,6 +30,15 @@ const settings = {
   slidesToShow: 2.5,
   slidesToScroll: 1,
   swipeToSlide: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        centerMode: true,
+      },
+    },
+  ],
 };
 
 const Detail = () => {

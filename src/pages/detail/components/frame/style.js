@@ -1,6 +1,9 @@
 import { css } from "@emotion/react";
 
 export const frameCSS = css`
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
 `;

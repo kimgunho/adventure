@@ -1,14 +1,24 @@
 import { css } from "@emotion/react";
 import { FontsatoshiBold, FontsatoshiMedium } from "../../../../assets/styles/fonts";
+import { TABLET } from "../../../../assets/styles/mediaQuery";
 
 export const wrapper = css`
   display: flex;
+
+  ${TABLET} {
+    flex-direction: column;
+  }
 `;
 
 export const info = css`
   width: 40%;
   padding: 5.625rem;
   box-sizing: border-box;
+
+  ${TABLET} {
+    width: 100%;
+    padding: 5rem 2rem;
+  }
 
   > h2 {
     color: #1f1f1f;
@@ -37,9 +47,17 @@ export const info = css`
 export const map = css`
   width: 60%;
 
+  ${TABLET} {
+    width: 100%;
+  }
+
   > iframe {
     width: 100%;
     height: 100%;
     border: 0;
+
+    ${TABLET} {
+      min-height: 30vh;
+    }
   }
 `;

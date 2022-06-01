@@ -1,5 +1,6 @@
 import { css } from "@emotion/react";
 import { FontsatoshiBold, FontsatoshiMedium } from "../../assets/styles/fonts";
+import { TABLET } from "../../assets/styles/mediaQuery";
 
 export const wrapper = css``;
 
@@ -23,13 +24,21 @@ export const detailHeader = css`
     color: #1f1f1f;
     font-size: 4rem;
     font-weight: 600;
+
+    ${TABLET} {
+      font-size: 3rem;
+    }
   }
 `;
 
 export const imageBox = css`
   position: relative;
+  width: 100%;
+  height: 70vh;
   > img {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
   }
 `;
 
@@ -40,6 +49,7 @@ export const frameButton = active => css`
   background-color: transparent;
   border: 0;
   border-radius: 50%;
+  transform: translate(-50%, -50%);
   cursor: pointer;
   display: ${active ? "none" : "block"};
 `;
@@ -49,10 +59,19 @@ export const info = css`
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+
+  ${TABLET} {
+    padding: 5rem 2rem;
+    flex-direction: column;
+  }
 `;
 
 export const desc = css`
   width: 45%;
+
+  ${TABLET} {
+    width: 100%;
+  }
   > p {
     font-size: 1.75rem;
     color: #1f1f1f;
@@ -65,6 +84,11 @@ export const desc = css`
 export const infoList = css`
   width: 45%;
 
+  ${TABLET} {
+    margin-top: 3rem;
+    width: 100%;
+  }
+
   > ul {
     border-top: 1px solid #1f1f1f;
     > li {
@@ -73,11 +97,19 @@ export const infoList = css`
       justify-content: space-between;
       padding: 1.5rem 0;
 
+      ${TABLET} {
+        flex-direction: column;
+      }
+
       > span {
         &:first-of-type {
           font-size: 1.25rem;
           color: #222;
           ${FontsatoshiMedium};
+
+          ${TABLET} {
+            margin-bottom: 1.25rem;
+          }
         }
         &:last-of-type {
           font-size: 1.25rem;
@@ -92,6 +124,9 @@ export const infoList = css`
 export const sliderWrapper = css`
   overflow: hidden;
   position: relative;
+  ${TABLET} {
+    padding-bottom: 5rem;
+  }
 `;
 
 export const sliderImageCSS = css`
@@ -121,6 +156,12 @@ export const sliderButton = css`
   border-radius: 5rem;
   padding: 1rem 2rem;
   cursor: pointer;
+
+  ${TABLET} {
+    bottom: 0;
+    left: 50%;
+    top: auto;
+  }
 
   > span {
     font-size: 1.25rem;
