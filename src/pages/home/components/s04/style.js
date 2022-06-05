@@ -4,7 +4,7 @@ import { PC_HOVER, TABLET } from "../../../../assets/styles/mediaQuery";
 
 const changeBackgroundImage = imageArr => keyframes`
 0%{
-  background-image:url(${imageArr[0]});
+  background-image:url(${imageArr[1]});
 }
 1%{
   background-image:url(${imageArr[1]});

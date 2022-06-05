@@ -48,22 +48,11 @@ export const info = css`
   flex-direction: column;
   width: 40%;
   box-sizing: border-box;
-  border-radius: 0 1rem 0 0;
   position: relative;
 
   > div {
     width: 100%;
     max-width: 33.75rem;
-  }
-
-  &.active {
-    > div {
-      position: fixed;
-      /* top: 5.625rem; */
-      top: 12.625rem;
-      width: 33.75rem;
-      bottom: 5.625rem;
-    }
   }
 `;
 
@@ -78,26 +67,26 @@ export const desc = css`
   font-size: 1.5rem;
   color: #fff;
   line-height: 1.8;
-  opacity: 0;
   transition: opacity 1s ease;
   width: 100%;
   max-width: 30vw;
+`;
+
+export const linkButton = css`
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+  font-size: 2.5rem;
+  color: #fff;
+  transition: all 1s ease;
+  opacity: 0;
+  position: fixed;
+  bottom: 3rem;
+  ${FontsatoshiRegular};
 
   &.active {
     opacity: 1;
   }
-`;
-
-export const linkButton = css`
-  position: absolute;
-  bottom: 5.625rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: underline;
-  font-size: 2.5rem;
-  color: #fff;
-  ${FontsatoshiRegular};
 
   > img {
     margin-left: 0.5rem;
@@ -108,7 +97,7 @@ export const project = css`
   width: 60%;
   padding: 1rem;
   box-sizing: border-box;
-  background-color: #f7f7f7;
+  background-color: #fff;
 `;
 
 export const mainProject = css`

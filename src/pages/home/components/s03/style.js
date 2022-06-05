@@ -42,7 +42,7 @@ export const rightText = css`
   white-space: nowrap;
   display: inline-block;
   width: 100%;
-  height: 10vw;
+  height: 8vw;
 
   > span {
     position: absolute;

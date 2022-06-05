@@ -19,7 +19,7 @@ export const header = isBackground => css`
   align-items: center;
   z-index: 100;
   width: 100%;
-  height: 7.5rem;
+  height: 5rem;
   box-sizing: border-box;
   padding: 0 5.625rem;
   transition: background-color 0.2s ease;
@@ -115,10 +115,14 @@ export const sns = css`
 export const mobileKakaoButton = css`
   width: 8rem;
   height: 8rem;
-  display: block;
+  display: none;
   position: fixed;
   right: 2rem;
   bottom: 2rem;
+
+  ${TABLET} {
+    display: block;
+  }
 
   > img {
     width: 100%;

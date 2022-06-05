@@ -110,7 +110,6 @@ export const companyCSContainer = css`
     color: #fff;
     font-size: 0.875rem;
     padding-bottom: 0.5rem;
-    display: block;
     ${TABLET} {
       display: none;
     }
@@ -122,5 +121,19 @@ export const companyCSContainer = css`
     ${TABLET} {
       display: none;
     }
+  }
+`;
+
+export const mobile = css`
+  display: none;
+  ${TABLET} {
+    display: block;
+  }
+`;
+
+export const pc = css`
+  display: block;
+  ${TABLET} {
+    display: none;
   }
 `;

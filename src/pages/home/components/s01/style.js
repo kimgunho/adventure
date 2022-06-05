@@ -1,12 +1,14 @@
 import { css } from "@emotion/react";
 import { Fontanton, FontsatoshiBold, FontsatoshiRegular } from "../../../../assets/styles/fonts";
 import { bounce } from "../../../../assets/styles/animaition";
-import { PC_HOVER, TABLET, MOBILE } from "../../../../assets/styles/mediaQuery";
+import { TABLET } from "../../../../assets/styles/mediaQuery";
 
 export const container = css`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  text-align: center;
   min-height: 100vh;
   height: 100%;
   background-color: #f7f7f7;
@@ -27,17 +29,6 @@ export const box = css`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  ${PC_HOVER} {
-    &:hover {
-      .en {
-        opacity: 0;
-      }
-      .ko {
-        opacity: 1;
-      }
-    }
-  }
 `;
 
 export const title = css`
@@ -46,7 +37,6 @@ export const title = css`
   position: relative;
 
   > span {
-    transition: all 0.5s ease;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -63,14 +53,14 @@ export const en = css`
 `;
 
 export const ko = css`
-  letter-spacing: 5rem;
+  letter-spacing: 3rem;
   font-weight: 600;
-  font-size: 9vw;
+  font-size: 10vw;
   white-space: nowrap;
-  opacity: 0;
 `;
 
 export const desc = css`
+  margin-top: 2rem;
   display: block;
   letter-spacing: 0px;
   font-size: 1.5rem;

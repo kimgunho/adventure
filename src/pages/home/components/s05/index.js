@@ -45,11 +45,7 @@ const S04 = () => {
             <li>
               <div css={mailInfoData}>
                 <h4>Business</h4>
-                <a href="mailto:sjlee@adventure-f.com">
-                  sjlee
-                  <br />
-                  @adventure-f.com
-                </a>
+                <a href="mailto:sjlee@adventure-f.com">sjlee@adventure-f.com</a>
               </div>
 
               <div css={mainControls}>
@@ -67,19 +63,15 @@ const S04 = () => {
                   <img src={copy_icon} alt="이메일 복사하기" />
                   <p css={[cotyDesc, isSjleeCopy && copySucess]}>copy sucess!</p>
                 </a>
-                <a href="mailto:sjlee@adventure-f.com">
+                {/* <a href="mailto:sjlee@adventure-f.com">
                   <img src={link_icon} alt="이메일 전송하기" />
-                </a>
+                </a> */}
               </div>
             </li>
             <li>
               <div css={mailInfoData}>
                 <h4>Career</h4>
-                <a href="mailto:af@adventure-f.com">
-                  af
-                  <br />
-                  @adventure-f.com
-                </a>
+                <a href="mailto:af@adventure-f.com">af@adventure-f.com</a>
               </div>
               <div css={mainControls}>
                 <a
@@ -96,9 +88,9 @@ const S04 = () => {
                   <img src={copy_icon} alt="이메일 복사하기" />
                   <p css={[cotyDesc, isAfCopy && copySucess]}>copy sucess!</p>
                 </a>
-                <a href="mailto:af@adventure-f.com">
+                {/* <a href="mailto:af@adventure-f.com">
                   <img src={link_icon} alt="이메일 전송하기" />
-                </a>
+                </a> */}
               </div>
             </li>
           </ul>

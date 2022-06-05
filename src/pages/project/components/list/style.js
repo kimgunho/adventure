@@ -5,7 +5,7 @@ import { TABLET } from "../../../../assets/styles/mediaQuery";
 export const wrapper = css``;
 
 export const headerContainer = css`
-  padding: 6.25rem 5.625rem 5rem 5.625rem;
+  padding: 6.25rem 5.625rem 1rem 5.625rem;
   box-sizing: border-box;
 
   ${TABLET} {
@@ -88,6 +88,7 @@ export const topArr = css`
 
 export const imageBox = css`
   overflow: hidden;
+  line-height: 0;
   border-radius: 1rem;
   > img {
     width: 100%;
@@ -103,6 +104,7 @@ export const infoBox = css`
   > p {
     font-size: 1rem;
     color: #0f0f0f;
+    margin: 1rem 0;
 
     ${TABLET} {
       font-size: 14px;

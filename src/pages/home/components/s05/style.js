@@ -103,21 +103,28 @@ export const mailInfoData = css`
   > h4 {
     font-size: 1.125rem;
     color: #222;
+    margin-right: 2rem;
     line-height: 1.6;
     ${FontsatoshiRegular};
+
+    ${TABLET} {
+      margin: 0;
+    }
   }
 
   > a {
-    font-size: 3.75rem;
+    font-size: 2.5vw;
     color: #222;
     line-height: 1.6;
-    text-decoration: underline;
-    padding-left: 4.6875rem;
+    white-space: nowrap;
+    border-bottom: 3px solid #222;
+    line-height: 1;
+    padding-bottom: 1rem;
     ${FontsatoshiMedium};
 
     ${TABLET} {
-      padding: 3rem 0 0 0;
-      font-size: 3rem;
+      padding: 3rem 0 2rem;
+      font-size: 2.4rem;
     }
   }
 `;

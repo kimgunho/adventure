@@ -91,8 +91,10 @@ const List = () => {
   const handleIncreaseCount = () => {
     if (count >= bodyData.length) {
       setIsScrollEnd(true);
+      return;
     }
     setCount(prev => prev + 8);
+    return;
   };
 
   return (
