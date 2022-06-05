@@ -7,7 +7,7 @@ import kakaoButton from "../../../assets/images/header/kakao.png";
 
 import Menu from "../menu";
 
-import { header, flex, menuButton, sns, mobileKakaoButton } from "./style";
+import { header, flex, logo, menuButton, sns, mobileKakaoButton } from "./style";
 const Header = () => {
   const [isClick, setIsClick] = useState(false);
   const [isBackgroundColor, setIsBackgroundColor] = useState(false);
@@ -35,7 +35,7 @@ const Header = () => {
     <>
       <header css={header(isBackgroundColor)} className="header">
         <div css={flex}>
-          <h1>
+          <h1 css={logo}>
             <Link to="/">
               <img src={header_logo} alt="어드밴쳐 프레임" />
             </Link>

@@ -78,9 +78,19 @@ export const companyCSContainer = css`
 
     > li {
       margin-right: 1.25rem;
+      width: 3.25rem;
+      height: 3.25rem;
 
       &:last-of-type {
         margin-right: 0;
+      }
+
+      > a {
+        display: block;
+
+        > img {
+          width: 100%;
+        }
       }
     }
   }

@@ -1,8 +1,17 @@
 /** @jsxImportSource @emotion/react */
 import { useState } from "react";
 import playIcon from "../../../../assets/images/project/playIcon.png";
+import arrow_down_icon from "../../../../assets/images/home/arrow_down_icon.png";
 
-import { showRealWrapper, frameCSS, titleCSS, mainBackground, playButton } from "./style";
+import {
+  showRealWrapper,
+  frameCSS,
+  titleCSS,
+  mainBackground,
+  playButton,
+  sectionDownBox,
+  sectionDown,
+} from "./style";
 
 const ShowReel = ({ youtubeQuery, title }) => {
   const [isClick, setIsClick] = useState(false);
@@ -33,6 +42,13 @@ const ShowReel = ({ youtubeQuery, title }) => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
+
+      <div css={sectionDownBox}>
+        <div css={sectionDown}>
+          <p>Let’s explore</p>
+          <img src={arrow_down_icon} alt="" />
+        </div>
+      </div>
     </section>
   );
 };

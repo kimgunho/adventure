@@ -1,20 +1,33 @@
 import { css } from "@emotion/react";
-import { Fontanton } from "../../../../assets/styles/fonts";
+import { Fontanton, FontsatoshiRegular } from "../../../../assets/styles/fonts";
 import { TABLET } from "../../../../assets/styles/mediaQuery";
+import { bounce } from "../../../../assets/styles/animaition";
 
 export const showRealWrapper = css`
   min-height: 100vh;
+  width: 100%;
   position: relative;
+  background-color: #f7f7f7;
+
+  ${TABLET} {
+    min-height: 70vh;
+  }
 `;
 
 export const frameCSS = active => css`
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 50;
   display: ${active ? "block" : "none"};
+
+  ${TABLET} {
+    width: 100%;
+    height: 40vh;
+  }
 `;
 
 export const titleCSS = css`
@@ -35,14 +48,20 @@ export const titleCSS = css`
 `;
 
 export const mainBackground = css`
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  ${TABLET} {
+    width: 100%;
+    height: 40vh;
+  }
 `;
 
 export const playButton = active => css`
@@ -60,5 +79,28 @@ export const playButton = active => css`
 
   > img {
     width: 100%;
+  }
+`;
+
+export const sectionDownBox = css`
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+`;
+
+export const sectionDown = css`
+  text-align: center;
+  animation: ${bounce} 1s ease infinite;
+
+  > p {
+    font-size: 1.125rem;
+    color: #000;
+    padding-bottom: 1rem;
+    ${FontsatoshiRegular}
+  }
+  > img {
+    width: 100%;
+    max-width: 1.25rem;
   }
 `;

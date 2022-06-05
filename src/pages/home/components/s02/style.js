@@ -111,6 +111,7 @@ export const mainProject = css`
       border-radius: 1rem;
       position: relative;
       overflow: hidden;
+      line-height: 0;
 
       > img {
         width: 100%;
@@ -130,6 +131,7 @@ export const mainProject = css`
         bottom: 2rem;
         font-size: 1.5rem;
         color: #fff;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
     }
     > h3 {
@@ -156,6 +158,7 @@ export const projectList = css`
         border-radius: 1rem;
         position: relative;
         overflow: hidden;
+        line-height: 0;
 
         > img {
           filter: grayscale(100%);
@@ -175,6 +178,7 @@ export const projectList = css`
           bottom: 2rem;
           font-size: 1.5rem;
           color: #fff;
+          text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
       }
       > h3 {

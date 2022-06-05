@@ -30,8 +30,13 @@ const List = () => {
   const [count, setCount] = useState(8);
   const [isScrollEnd, setIsScrollEnd] = useState(false);
   const [data, setData] = useState([]);
+  const [dataLength, setDataLength] = useState(0);
   const [mainDisplay, setMainDisplay] = useState({});
   const [url, setUrl] = useState(params.kind);
+
+  useEffect(() => {
+    dataLength !== 0 && count >= data.length - 3 && setIsScrollEnd(true);
+  }, [count]);
 
   useEffect(() => {
     getActiveJson();
@@ -70,6 +75,7 @@ const List = () => {
   const fetchProject = async () => {
     const response = await axios.get(url);
     const { main, data } = await response.data;
+    setDataLength(data.length);
     setData(data);
     setMainDisplay(main);
   };
@@ -80,6 +86,11 @@ const List = () => {
     }
     navigate(navLink);
     setActiveKind(kind);
+    setCount(8);
+    setIsScrollEnd(false);
+    setTimeout(() => {
+      window.scrollTo(0, window.innerHeight);
+    }, 10);
   };
 
   if (!data) {
@@ -89,10 +100,6 @@ const List = () => {
   const bodyData = data?.filter((item, index) => index > 3);
 
   const handleIncreaseCount = () => {
-    if (count >= bodyData.length) {
-      setIsScrollEnd(true);
-      return;
-    }
     setCount(prev => prev + 8);
     return;
   };
@@ -175,25 +182,23 @@ const List = () => {
           </ul>
         </div>
       </section>
-      {!isScrollEnd ? (
-        <button css={moreButton} type="button" onClick={handleIncreaseCount}>
-          <span>More works</span>
-          <img src={arrowDownIcon} alt="More works" />
-        </button>
-      ) : (
-        <button
-          css={moreButton}
-          type="button"
-          onClick={() => {
-            window.scrollTo(0, 0);
-            setIsScrollEnd(false);
-            setCount(8);
-          }}
-        >
-          <span>Go to top</span>
-          <img src={arrowUpIcon} alt="Go to top" />
-        </button>
-      )}
+      <button
+        css={moreButton}
+        type="button"
+        onClick={
+          !isScrollEnd
+            ? handleIncreaseCount
+            : () => {
+                window.scrollTo(0, window.innerHeight);
+              }
+        }
+      >
+        <span>{!isScrollEnd ? "More works" : "Go to top"} </span>
+        <img
+          src={!isScrollEnd ? arrowDownIcon : arrowUpIcon}
+          alt={!isScrollEnd ? "More works" : "Go to top"}
+        />
+      </button>
     </main>
   );
 };

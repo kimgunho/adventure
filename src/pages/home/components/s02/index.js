@@ -53,7 +53,6 @@ const S02 = () => {
     setMainDisplay(main);
   };
 
-  console.log(data);
   return (
     <section className="s2Contianer" css={container}>
       <div className="line" css={line}>

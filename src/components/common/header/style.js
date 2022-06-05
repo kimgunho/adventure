@@ -30,6 +30,17 @@ export const header = isBackground => css`
   }
 `;
 
+export const logo = css`
+  width: 2.8125rem;
+  height: 2.8125rem;
+
+  a {
+    > img {
+      width: 100%;
+    }
+  }
+`;
+
 export const flex = css`
   display: flex;
   justify-content: space-between;
@@ -105,6 +116,9 @@ export const sns = css`
     }
 
     > a {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
       display: block;
       width: 3.25rem;
       height: 3.25rem;

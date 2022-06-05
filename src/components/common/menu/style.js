@@ -171,9 +171,17 @@ export const munuList = css`
 
       > li {
         margin-right: 1rem;
+        width: 3.25rem;
+        height: 3.25rem;
 
         &:last-of-type {
           margin-right: 0;
+        }
+
+        a {
+          > img {
+            width: 100%;
+          }
         }
       }
     }

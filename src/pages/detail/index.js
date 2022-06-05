@@ -7,7 +7,6 @@ import Slider from "react-slick";
 import playButtonImage from "../../assets/images/detail/playIcon.png";
 import arrowLeft from "../../assets/images/detail/arrow_left.svg";
 import arrowRight from "../../assets/images/detail/arrow_right.svg";
-import closeButtonIcon from "../../assets/images/detail/close_button_icon.png";
 
 import SimilarProjectsArr from "./components/similarProjectArr";
 import Frame from "./components/frame";
@@ -23,8 +22,6 @@ import {
   sliderWrapper,
   sliderButton,
   frameButton,
-  modal,
-  closeButton,
 } from "./style";
 
 const settings = {
@@ -51,9 +48,6 @@ const Detail = () => {
   const [isFrameActive, setIsFrameActive] = useState(false);
   const [state, setState] = useState({ category: "", url: "" });
   const sliderContainerRef = useRef();
-  const modalRef = useRef();
-  const [modalSrc, setModalSrc] = useState("");
-  const [isModal, setIsMadal] = useState(false);
 
   useEffect(() => {
     getCategory();
@@ -92,15 +86,6 @@ const Detail = () => {
     const currentData = await data.filter(item => item.id === Number(params.id));
     Number(params.id) === 0 ? setDetail(main) : setDetail(currentData[0]);
     setMoreData(filterData);
-  };
-
-  const showModalImage = event => {
-    setModalSrc(event.target.currentSrc);
-    setIsMadal(true);
-  };
-
-  const hideModalImage = event => {
-    setIsMadal(false);
   };
 
   return (
@@ -160,19 +145,12 @@ const Detail = () => {
           {detail.images && (
             <Slider {...settings} ref={sliderContainerRef}>
               {detail.images.map((imgSrc, index) => (
-                <div key={index} css={sliderImageCSS} onClick={showModalImage}>
+                <div key={index} css={sliderImageCSS}>
                   <img src={`${imgSrc}`} alt="" />
                 </div>
               ))}
             </Slider>
           )}
-
-          <div css={modal(isModal)}>
-            <button css={closeButton} type="button" onClick={hideModalImage}>
-              <img src={closeButtonIcon} alt="" />
-            </button>
-            <img ref={modalRef} src={modalSrc} alt="" />
-          </div>
 
           <button css={sliderButton}>
             <span onClick={() => sliderContainerRef.current?.slickPrev()}>
