@@ -105,40 +105,56 @@ export const imageBox = css`
   }
 `;
 
+export const displayImageBox = css`
+  overflow: hidden;
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  transition: all 0.2s ease;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+`;
+
 export const infoBox = css`
   text-align: center;
   position: absolute;
   left: 50%;
-  bottom: 2rem;
+  bottom: 2.125rem;
   transform: translate(-50%, 0);
 
   ${TABLET} {
     text-align: left;
   }
   > p {
-    font-size: 1rem;
-    color: #0f0f0f;
+    font-size: 0.875rem;
+    color: #fff;
     margin: 1rem 0;
 
     ${TABLET} {
-      font-size: 14px;
-      line-height: 3;
+      /* font-size: 14px; */
+      /* line-height: 3; */
     }
   }
   > h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #0f0f0f;
+    color: #fff;
 
     ${TABLET} {
-      font-size: 1.5rem;
+      /* font-size: 1.25rem; */
     }
   }
 `;
 
 export const topDisplay = css`
-  width: 50%;
-  padding: 1rem;
+  width: 48.5%;
+  margin: 1rem;
   box-sizing: border-box;
   position: relative;
 

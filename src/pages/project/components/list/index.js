@@ -22,6 +22,7 @@ import {
   infoBox,
   bottomArr,
   moreButton,
+  displayImageBox,
 } from "./style";
 const List = () => {
   const params = useParams();
@@ -145,11 +146,16 @@ const List = () => {
           </ul>
           <div css={topDisplay}>
             <Link to={`/project/${mainDisplay?.category}/${mainDisplay?.id}`}>
-              <div css={imageBox}>
-                <img
+              <div
+                css={displayImageBox}
+                style={{
+                  backgroundImage: `url(https://img.youtube.com/vi/${mainDisplay?.youtube}/maxresdefault.jpg)`,
+                }}
+              >
+                {/* <img
                   src={`https://img.youtube.com/vi/${mainDisplay?.youtube}/maxresdefault.jpg`}
                   alt={mainDisplay?.title}
-                />
+                /> */}
               </div>
               <div css={infoBox}>
                 <p>{mainDisplay?.client}</p>
