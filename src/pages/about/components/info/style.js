@@ -80,8 +80,9 @@ export const topBody = css`
         justify-content: flex-start;
         > span {
           font-size: 60px;
-          text-decoration: underline;
           color: #1f1f1f;
+          border-bottom: 5px solid #1f1f1f;
+          padding-bottom: 0.2rem;
           ${FontsatoshiMedium};
 
           ${TABLET} {
@@ -174,7 +175,8 @@ export const bottomDesc = css`
         justify-content: flex-start;
         > span {
           font-size: 60px;
-          text-decoration: underline;
+          border-bottom: 5px solid #1f1f1f;
+          padding-bottom: 0.2rem;
           color: #1f1f1f;
           white-space: nowrap;
           ${FontsatoshiMedium};

@@ -79,6 +79,7 @@ export const topArr = css`
     width: 50%;
     padding: 1rem;
     box-sizing: border-box;
+    position: relative;
 
     ${TABLET} {
       width: 100%;
@@ -90,13 +91,26 @@ export const imageBox = css`
   overflow: hidden;
   line-height: 0;
   border-radius: 1rem;
+
+  &:hover {
+    > img {
+      filter: grayscale(0%);
+    }
+  }
+
   > img {
     width: 100%;
+    filter: grayscale(100%);
+    transition: all 0.2s ease;
   }
 `;
 
 export const infoBox = css`
   text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translate(-50%, 0);
 
   ${TABLET} {
     text-align: left;
@@ -126,6 +140,7 @@ export const topDisplay = css`
   width: 50%;
   padding: 1rem;
   box-sizing: border-box;
+  position: relative;
 
   ${TABLET} {
     width: 100%;
@@ -147,6 +162,7 @@ export const bottomArr = css`
     width: 25%;
     padding: 1rem;
     box-sizing: border-box;
+    position: relative;
 
     ${TABLET} {
       width: 100%;

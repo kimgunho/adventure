@@ -62,7 +62,8 @@ export const mailList = css`
     }
     > a {
       font-size: 2rem;
-      text-decoration: underline;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #fff;
     }
   }
 `;

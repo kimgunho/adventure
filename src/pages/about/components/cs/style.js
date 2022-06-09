@@ -34,7 +34,8 @@ export const wrapper = css`
     justify-content: center;
 
     > span {
-      text-decoration: underline;
+      border-bottom: 5px solid #fff;
+      padding-bottom: 0.2rem;
       padding-right: 1rem;
       font-size: 3.75rem;
       ${FontsatoshiMedium};
