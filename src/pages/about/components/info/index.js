@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-
+import { links } from "../../../../links";
 import { useRef } from "react";
 // import emailjs from "@emailjs/browser";
 
@@ -61,13 +61,13 @@ const Info = () => {
         <div css={topBody}>
           <ul>
             <li>
-              <a href="" target={"_blank"}>
+              <a href={links.insta} target={"_blank"} rel="noreferrer">
                 <span>Instagram</span>
                 <img src={linkIcon} alt="" />
               </a>
             </li>
             <li>
-              <a href="" target={"_blank"}>
+              <a href={links.youtube} target={"_blank"} rel="noreferrer">
                 <span>youtube</span>
                 <img src={linkIcon} alt="" />
               </a>
@@ -100,7 +100,7 @@ const Info = () => {
                 </a>
               </li>
               <li>
-                <a href="" target={"_blank"}>
+                <a href={links.kakao} target={"_blank"} rel="noreferrer">
                   <span>Kakaotalk channel</span>
                   <img src={linkIcon} alt="" />
                 </a>
@@ -149,7 +149,7 @@ const Info = () => {
                 </a>
               </li>
               <li>
-                <a href="" target={"_blank"}>
+                <a href={links.kakao} target={"_blank"} rel="noreferrer">
                   <span>Kakaotalk channel</span>
                   <img src={linkIcon} alt="" />
                 </a>

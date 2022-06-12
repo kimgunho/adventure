@@ -42,10 +42,6 @@ const S02 = () => {
           },
         },
       });
-
-      // tl.to(".project", {
-      //   transform: `translateY(-${projectRef.current.clientHeight - window.innerHeight + 200}px)`,
-      // });
     }, 1000);
   }, [window.innerWidth]);
 

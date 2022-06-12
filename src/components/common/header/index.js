@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { links } from "../../../links";
 
 import header_logo from "../../../assets/images/header/logo.png";
 import kakaoButton from "../../../assets/images/header/kakao.png";
@@ -47,17 +48,17 @@ const Header = () => {
         <nav>
           <ul css={sns}>
             <li>
-              <a href="" target={"_blank"}></a>
+              <a href={links.youtube} target={"_blank"} rel="noreferrer"></a>
             </li>
             <li>
-              <a href="" target={"_blank"}></a>
+              <a href={links.insta} target={"_blank"} rel="noreferrer"></a>
             </li>
             <li>
-              <a href="" target={"_blank"}></a>
+              <a href={links.kakao} target={"_blank"} rel="noreferrer"></a>
             </li>
           </ul>
         </nav>
-        <a href="" css={mobileKakaoButton}>
+        <a href={links.kakao} target={"_blank"} css={mobileKakaoButton} rel="noreferrer">
           <img src={kakaoButton} alt="" />
         </a>
       </header>

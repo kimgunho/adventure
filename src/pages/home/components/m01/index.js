@@ -36,7 +36,14 @@ const M01 = () => {
         <button css={playButtonCSS(isClick)} type="button" onClick={playVideo}>
           <img src={playButton} alt="play video" />
         </button>
-        <video ref={videoRef} poster={introVideoThumImg}>
+        <video
+          autoPlay={false}
+          loop
+          muted
+          playsinline={false}
+          ref={videoRef}
+          poster={introVideoThumImg}
+        >
           <source src={VIDEO} type="video/mp4" />
         </video>
       </div>

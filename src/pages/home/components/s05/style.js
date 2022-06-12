@@ -124,7 +124,7 @@ export const mailInfoData = css`
     ${FontsatoshiMedium};
 
     ${TABLET} {
-      padding: 3rem 0 2rem;
+      padding: 1rem 0;
       font-size: 2.4rem;
       border-bottom: 2px solid #222;
     }

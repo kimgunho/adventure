@@ -10,13 +10,13 @@ export const showRealWrapper = css`
   background-color: #f7f7f7;
 
   ${TABLET} {
-    min-height: 100vh;
+    min-height: 80vh;
   }
 `;
 
 export const frameCSS = active => css`
   width: 80%;
-  height: 80%;
+  height: 70vh;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -49,7 +49,7 @@ export const titleCSS = css`
 
 export const mainBackground = css`
   width: 80%;
-  height: 80%;
+  height: 70vh;
   position: absolute;
   left: 50%;
   top: 50%;

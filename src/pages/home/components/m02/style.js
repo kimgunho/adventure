@@ -42,12 +42,13 @@ export const linkButton = css`
   display: flex;
   align-items: center;
   text-decoration: underline;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #fff;
   ${FontsatoshiRegular};
 
   > img {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
+    width: 12px;
   }
 `;
 

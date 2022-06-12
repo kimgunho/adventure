@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { useState } from "react";
+import { links } from "../../../../links";
 
 import arrow_right_icon from "../../../../assets/images/home/arrow_right_icon.png";
 import copy_icon from "../../../../assets/images/home/copyIcon.png";
@@ -35,7 +36,7 @@ const S04 = () => {
             Shall we?
           </h3>
 
-          <a href="" target={"_blank"} css={kakaoButton}>
+          <a href={links.kakao} target={"_blank"} css={kakaoButton} rel="noreferrer">
             <span>카카오톡 상담하기</span> <img src={arrow_right_icon} alt="" />
           </a>
         </div>

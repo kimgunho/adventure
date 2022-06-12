@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { Link } from "react-router-dom";
+import { links } from "../../../links";
 
 import youtube_icon from "../../../assets/images/header/youtube_icon_white.png";
 import insta_icon from "../../../assets/images/header/insta_icon_white.png";
@@ -61,17 +62,17 @@ const Menu = ({ active, setHandleActive }) => {
           <li>
             <ul>
               <li>
-                <a href="">
+                <a href={links.kakao} target={"_blank"} rel="noreferrer">
                   <img src={kakao_icon} alt="카카오 바로가기" />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href={links.youtube} target={"_blank"} rel="noreferrer">
                   <img src={youtube_icon} alt="유튜브 바로가기" />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href={links.insta} target={"_blank"} rel="noreferrer">
                   <img src={insta_icon} alt="인스타 바로가기" />
                 </a>
               </li>

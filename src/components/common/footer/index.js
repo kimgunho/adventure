@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import { links } from "../../../links";
 
 import footer_logo from "../../../assets/images/footer/footer_logo.png";
 import youtube_icon from "../../../assets/images/footer/youtube_icon.png";
@@ -27,17 +28,17 @@ const Footer = () => {
       <div css={companyCSContainer}>
         <ul>
           <li>
-            <a href="" target={"_blank"}>
+            <a href={links.youtube} target={"_blank"} rel="noreferrer">
               <img src={youtube_icon} alt="유튜브 바로가기" />
             </a>
           </li>
           <li>
-            <a href="" target={"_blank"}>
+            <a href={links.insta} target={"_blank"} rel="noreferrer">
               <img src={insta_icon} alt="인스타 바로가기" />
             </a>
           </li>
           <li>
-            <a href="" target={"_blank"}>
+            <a href={links.kakao} target={"_blank"} rel="noreferrer">
               <img src={kakao_icon} alt="카카오 바로가기" />
             </a>
           </li>
