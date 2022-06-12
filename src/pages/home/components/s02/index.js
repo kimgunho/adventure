@@ -33,7 +33,7 @@ const S02 = () => {
           trigger: ".s2Contianer",
           start: "top top+=80px",
           end: `bottom bottom`,
-          pin: true,
+          pin: ".box",
           scrub: true,
           markers: false,
           toggleClass: { className: "active", targets: [".line"] },
@@ -43,10 +43,9 @@ const S02 = () => {
         },
       });
 
-      tl.to(".project", {
-        transform: `translateY(-${projectRef.current.clientHeight - window.innerHeight + 200}px)`,
-        duration: 10,
-      });
+      // tl.to(".project", {
+      //   transform: `translateY(-${projectRef.current.clientHeight - window.innerHeight + 200}px)`,
+      // });
     }, 1000);
   }, [window.innerWidth]);
 
@@ -66,7 +65,7 @@ const S02 = () => {
       <div className="line" css={line}>
         <div css={percentLine(containerWidth)} />
       </div>
-      <article css={info}>
+      <article css={info} className="box">
         <div>
           <h2 css={title}>What we do</h2>
           <p css={desc} className="infoDesc">

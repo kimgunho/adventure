@@ -41,7 +41,7 @@ export const percentLine = width => css`
   background-color: #ddd;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 5rem;
 `;
 
 export const info = css`
