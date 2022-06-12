@@ -5,10 +5,12 @@ import { PC_HOVER, TABLET } from "../../../../assets/styles/mediaQuery";
 export const container = css`
   min-height: 100vh;
   height: 100%;
-  background-color: #f7f7f7;
+  background-color: #fff;
   display: flex;
   position: relative;
   justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
 
   ${TABLET} {
     display: none;
@@ -36,7 +38,7 @@ export const line = css`
 export const percentLine = width => css`
   width: ${width * 100}%;
   height: 10px;
-  background-color: #f7f7f7;
+  background-color: #ddd;
   position: absolute;
   left: 0;
   top: 0;
@@ -45,6 +47,7 @@ export const percentLine = width => css`
 export const info = css`
   background-color: #222;
   padding: 5.625rem;
+  min-height: 100vh;
   flex-direction: column;
   width: 40%;
   box-sizing: border-box;
@@ -78,15 +81,10 @@ export const linkButton = css`
   text-decoration: underline;
   font-size: 2.5rem;
   color: #fff;
-  transition: all 1s ease;
-  opacity: 0;
-  position: fixed;
-  bottom: 3rem;
+  margin-top: 30vh;
+  position: absolute;
+  bottom: 10rem;
   ${FontsatoshiRegular};
-
-  &.active {
-    opacity: 1;
-  }
 
   > img {
     margin-left: 0.5rem;
@@ -100,12 +98,35 @@ export const project = css`
   background-color: #fff;
 `;
 
+export const imgDimmed = css`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-image: linear-gradient(to top, #000 0%, transparent 90%);
+  transition: all 0.2s ease;
+`;
+
 export const mainProject = css`
   width: 100%;
   margin-bottom: 1.5rem;
   cursor: pointer;
 
   > a {
+    ${PC_HOVER} {
+      &:hover {
+        .imgDimmed {
+          opacity: 0;
+        }
+
+        img {
+          filter: grayscale(0);
+        }
+      }
+    }
+
     > div {
       width: 100%;
       border-radius: 1rem;
@@ -118,17 +139,12 @@ export const mainProject = css`
         filter: grayscale(100%);
         object-fit: contain;
         transition: all 0.2s ease;
-
-        ${PC_HOVER} {
-          &:hover {
-            filter: grayscale(0);
-          }
-        }
       }
       > p {
         position: absolute;
         left: 2rem;
         bottom: 2rem;
+        z-index: 15;
         font-size: 1.5rem;
         color: #fff;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -153,6 +169,19 @@ export const projectList = css`
     margin-bottom: 1.5rem;
     > a {
       display: block;
+
+      ${PC_HOVER} {
+        &:hover {
+          .imgDimmed {
+            opacity: 0;
+          }
+
+          img {
+            filter: grayscale(0);
+          }
+        }
+      }
+
       > div {
         width: 100%;
         border-radius: 1rem;
@@ -165,16 +194,11 @@ export const projectList = css`
           width: 100%;
           object-fit: contain;
           transition: all 0.2s ease;
-
-          ${PC_HOVER} {
-            &:hover {
-              filter: grayscale(0);
-            }
-          }
         }
         > p {
           position: absolute;
           left: 2rem;
+          z-index: 15;
           bottom: 2rem;
           font-size: 1.5rem;
           color: #fff;

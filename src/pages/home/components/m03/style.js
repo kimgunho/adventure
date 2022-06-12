@@ -15,9 +15,10 @@ export const container = css`
   background-color: #f7f7f7;
   position: relative;
   overflow: hidden;
-  display: block;
+  display: none;
+
   ${TABLET} {
-    display: none;
+    display: block;
   }
 `;
 

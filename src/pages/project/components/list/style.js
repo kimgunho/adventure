@@ -1,11 +1,11 @@
 import { css } from "@emotion/react";
 import { FontsatoshiBlack, FontsatoshiBold } from "../../../../assets/styles/fonts";
-import { TABLET } from "../../../../assets/styles/mediaQuery";
+import { PC_HOVER, TABLET } from "../../../../assets/styles/mediaQuery";
 
 export const wrapper = css``;
 
 export const headerContainer = css`
-  padding: 6.25rem 5.625rem 1rem 5.625rem;
+  padding: 6.25rem 5.625rem 4rem 5.625rem;
   box-sizing: border-box;
 
   ${TABLET} {
@@ -38,7 +38,7 @@ export const nav = css`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 2rem 2rem 0;
+    margin: 0 1rem 1rem 0;
     ${FontsatoshiBold};
   }
 `;
@@ -77,26 +77,32 @@ export const topArr = css`
 
   > li {
     width: 50%;
-    padding: 1rem;
+    padding: 0.5rem;
     box-sizing: border-box;
     position: relative;
 
     ${TABLET} {
       width: 100%;
     }
+
+    > a {
+      &:hover {
+        img {
+          filter: grayscale(0%);
+        }
+        .imgDimmed {
+          opacity: 0;
+        }
+      }
+    }
   }
 `;
 
 export const imageBox = css`
   overflow: hidden;
+  position: relative;
   line-height: 0;
   border-radius: 1rem;
-
-  &:hover {
-    > img {
-      filter: grayscale(0%);
-    }
-  }
 
   > img {
     width: 100%;
@@ -115,18 +121,16 @@ export const displayImageBox = css`
   height: 100%;
   filter: grayscale(100%);
   transition: all 0.2s ease;
-
-  &:hover {
-    filter: grayscale(0%);
-  }
 `;
 
 export const infoBox = css`
   text-align: center;
   position: absolute;
+  z-index: 15;
   left: 50%;
   bottom: 2.125rem;
   transform: translate(-50%, 0);
+  width: 100%;
 
   ${TABLET} {
     text-align: left;
@@ -134,7 +138,7 @@ export const infoBox = css`
   > p {
     font-size: 0.875rem;
     color: #fff;
-    margin: 1rem 0;
+    margin-bottom: 5px;
 
     ${TABLET} {
       /* font-size: 14px; */
@@ -153,10 +157,21 @@ export const infoBox = css`
 `;
 
 export const topDisplay = css`
-  width: 48.5%;
-  margin: 1rem;
+  width: 49%;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
   box-sizing: border-box;
   position: relative;
+
+  :hover {
+    .imgDimmed {
+      opacity: 0;
+    }
+    .displayImage {
+      filter: grayscale(0%);
+    }
+  }
 
   ${TABLET} {
     width: 100%;
@@ -176,12 +191,23 @@ export const bottomArr = css`
 
   > li {
     width: 25%;
-    padding: 1rem;
+    padding: 0.5rem;
     box-sizing: border-box;
     position: relative;
 
     ${TABLET} {
       width: 100%;
+    }
+
+    > a {
+      &:hover {
+        img {
+          filter: grayscale(0%);
+        }
+        .imgDimmed {
+          opacity: 0;
+        }
+      }
     }
   }
 `;
@@ -206,4 +232,15 @@ export const moreButton = css`
   > img {
     width: 14px;
   }
+`;
+
+export const imgDimmed = css`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-image: linear-gradient(to top, #000 0%, transparent 90%);
+  transition: all 0.2s ease;
 `;

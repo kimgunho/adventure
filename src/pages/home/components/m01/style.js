@@ -38,7 +38,7 @@ export const title = css`
 
 export const sectionDown = css`
   position: absolute;
-  bottom: 2rem;
+  bottom: 3rem;
   text-align: center;
   transform: translate(-50%, 0);
   animation: ${bounce} 1s ease infinite;

@@ -92,6 +92,7 @@ export const sectionDownBox = css`
 export const sectionDown = css`
   text-align: center;
   animation: ${bounce} 1s ease infinite;
+  margin-bottom: 1.5rem;
 
   > p {
     font-size: 1.125rem;

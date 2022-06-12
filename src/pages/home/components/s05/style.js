@@ -103,6 +103,7 @@ export const mailInfoData = css`
   > h4 {
     font-size: 1.125rem;
     color: #222;
+    min-width: 6.25rem;
     margin-right: 2rem;
     line-height: 1.6;
     ${FontsatoshiRegular};

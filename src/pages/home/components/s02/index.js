@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import axios from "axios";
@@ -16,6 +16,7 @@ import {
   percentLine,
   title,
   desc,
+  imgDimmed,
   linkButton,
 } from "./style";
 
@@ -23,24 +24,31 @@ const S02 = () => {
   const [containerWidth, setContainerWidth] = useState(0);
   const [data, setData] = useState([]);
   const [mainDisplay, setMainDisplay] = useState({});
+  const projectRef = useRef();
 
   useEffect(() => {
     setTimeout(() => {
-      gsap.timeline({
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".s2Contianer",
-          start: "top top",
-          end: `bottom bottom-=90px`,
+          start: "top top+=80px",
+          end: `bottom bottom`,
+          pin: true,
           scrub: true,
           markers: false,
-          toggleClass: { className: "active", targets: [".line", ".moreProject"] },
+          toggleClass: { className: "active", targets: [".line"] },
           onUpdate: self => {
             setContainerWidth(self.progress);
           },
         },
       });
+
+      tl.to(".project", {
+        transform: `translateY(-${projectRef.current.clientHeight - window.innerHeight + 200}px)`,
+      });
     }, 1000);
-  }, []);
+    console.log("again");
+  }, [window.innerWidth]);
 
   useEffect(() => {
     fetchProject();
@@ -58,7 +66,7 @@ const S02 = () => {
       <div className="line" css={line}>
         <div css={percentLine(containerWidth)} />
       </div>
-      <article css={info} className="info">
+      <article css={info}>
         <div>
           <h2 css={title}>What we do</h2>
           <p css={desc} className="infoDesc">
@@ -71,10 +79,11 @@ const S02 = () => {
           </Link>
         </div>
       </article>
-      <article css={project} className="project">
+      <article css={project} className="project" ref={projectRef}>
         <div css={mainProject}>
           <Link to={`/project/${mainDisplay.category}/${mainDisplay.id}`}>
             <div>
+              <div css={imgDimmed} className="imgDimmed" />
               <img
                 src={`https://img.youtube.com/vi/${mainDisplay.youtube}/maxresdefault.jpg`}
                 alt=""
@@ -84,11 +93,12 @@ const S02 = () => {
             <h3>{mainDisplay.title}</h3>
           </Link>
         </div>
-        <ul css={projectList}>
+        <ul css={projectList} className="projectArr">
           {data.map(item => (
             <li key={item.id}>
               <Link to={`/project/${item.category}/${item.id}`}>
                 <div>
+                  <div css={imgDimmed} className="imgDimmed" />
                   <img
                     src={`https://img.youtube.com/vi/${item.youtube}/maxresdefault.jpg`}
                     alt={item.title}

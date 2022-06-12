@@ -23,6 +23,7 @@ import {
   bottomArr,
   moreButton,
   displayImageBox,
+  imgDimmed,
 } from "./style";
 const List = () => {
   const params = useParams();
@@ -130,6 +131,7 @@ const List = () => {
                   <li key={project.id}>
                     <Link to={`/project/${project.category}/${project.id}`}>
                       <div css={imageBox}>
+                        <div css={imgDimmed} className="imgDimmed" />
                         <img
                           src={`https://img.youtube.com/vi/${project.youtube}/maxresdefault.jpg`}
                           alt=""
@@ -146,17 +148,14 @@ const List = () => {
           </ul>
           <div css={topDisplay}>
             <Link to={`/project/${mainDisplay?.category}/${mainDisplay?.id}`}>
+              <div css={imgDimmed} className="imgDimmed" />
               <div
+                className="displayImage"
                 css={displayImageBox}
                 style={{
                   backgroundImage: `url(https://img.youtube.com/vi/${mainDisplay?.youtube}/maxresdefault.jpg)`,
                 }}
-              >
-                {/* <img
-                  src={`https://img.youtube.com/vi/${mainDisplay?.youtube}/maxresdefault.jpg`}
-                  alt={mainDisplay?.title}
-                /> */}
-              </div>
+              ></div>
               <div css={infoBox}>
                 <p>{mainDisplay?.client}</p>
                 <h3>{mainDisplay?.title}</h3>
@@ -172,6 +171,7 @@ const List = () => {
                   <li key={project.id}>
                     <Link to={`/project/${project.category}/${project.id}`}>
                       <div css={imageBox}>
+                        <div css={imgDimmed} className="imgDimmed" />
                         <img
                           src={`https://img.youtube.com/vi/${project.youtube}/maxresdefault.jpg`}
                           alt=""
