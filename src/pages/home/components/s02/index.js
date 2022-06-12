@@ -45,6 +45,7 @@ const S02 = () => {
 
       tl.to(".project", {
         transform: `translateY(-${projectRef.current.clientHeight - window.innerHeight + 200}px)`,
+        duration: 10,
       });
     }, 1000);
   }, [window.innerWidth]);
