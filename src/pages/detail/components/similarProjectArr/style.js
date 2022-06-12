@@ -14,6 +14,10 @@ export const title = css`
   margin-bottom: 4.0625rem;
   text-transform: uppercase;
   ${FontsatoshiBlack};
+
+  ${TABLET} {
+    font-size: 30px;
+  }
 `;
 
 export const list = css`
@@ -84,7 +88,8 @@ export const button = css`
   font-size: 1.25rem;
 
   ${TABLET} {
-    padding: 2rem 3rem;
+    padding: 2rem;
+    font-size: 20px;
   }
 
   > span {

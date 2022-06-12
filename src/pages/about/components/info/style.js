@@ -35,6 +35,7 @@ export const topHeader = css`
 
     ${TABLET} {
       margin-bottom: 3rem;
+      font-size: 30px;
     }
   }
   > div {
@@ -46,6 +47,10 @@ export const topHeader = css`
     > p {
       font-size: 30px;
       line-height: 1.8;
+
+      ${TABLET} {
+        font-size: 16px;
+      }
 
       &:first-of-type {
         margin-bottom: 2rem;
@@ -74,19 +79,30 @@ export const topBody = css`
       width: 100%;
     }
     > li {
+      margin-bottom: 1.5rem;
+
+      ${TABLET} {
+        margin-bottom: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
       > a {
         display: flex;
         align-items: center;
         justify-content: flex-start;
+
         > span {
           font-size: 60px;
           color: #1f1f1f;
-          border-bottom: 5px solid #1f1f1f;
+          border-bottom: 3px solid #1f1f1f;
           padding-bottom: 0.2rem;
           ${FontsatoshiMedium};
 
           ${TABLET} {
-            font-size: 1.8rem;
+            font-size: 24px;
+            border-bottom-width: 2px;
           }
         }
         > img {
@@ -110,6 +126,10 @@ export const topBody = css`
       font-weight: 600;
       color: #1f1f1f;
       margin-bottom: 2rem;
+
+      ${TABLET} {
+        font-size: 18px;
+      }
     }
     > a {
       display: flex;
@@ -124,6 +144,10 @@ export const topBody = css`
       > span {
         font-size: 1.5rem;
         color: #fff;
+
+        ${TABLET} {
+          font-size: 20px;
+        }
       }
       > img {
         width: 4rem;
@@ -160,7 +184,7 @@ export const bottomDesc = css`
     margin-bottom: 3rem;
 
     @media (max-width: 1600px) {
-      font-size: 2.4rem;
+      font-size: 30px;
     }
   }
 
@@ -169,17 +193,26 @@ export const bottomDesc = css`
       display: none;
     }
     > li {
+      margin-bottom: 1.5rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
       > a {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         > span {
           font-size: 60px;
-          border-bottom: 5px solid #1f1f1f;
+          border-bottom: 3px solid #1f1f1f;
           padding-bottom: 0.2rem;
           color: #1f1f1f;
           white-space: nowrap;
           ${FontsatoshiMedium};
+
+          ${TABLET} {
+            border-bottom-width: 2px;
+          }
 
           @media (max-width: 1600px) {
             font-size: 2.4rem;
@@ -214,6 +247,10 @@ export const bottomForm = css`
           border: 0;
           border-bottom: 1px solid #1f1f1f;
           background-color: transparent;
+
+          ${TABLET} {
+            font-size: 16px;
+          }
         }
 
         > textarea {
@@ -225,6 +262,10 @@ export const bottomForm = css`
           font-size: 1.5rem;
           color: #666;
           border: 0;
+
+          ${TABLET} {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -269,10 +310,15 @@ export const bottomForm = css`
         justify-content: flex-start;
         > span {
           font-size: 2rem;
-          text-decoration: underline;
+          border-bottom: 3px solid #1f1f1f;
           color: #1f1f1f;
           white-space: nowrap;
           ${FontsatoshiMedium};
+
+          ${TABLET} {
+            border-bottom-width: 2px;
+            font-size: 24px;
+          }
         }
         > img {
           margin-left: 1rem;

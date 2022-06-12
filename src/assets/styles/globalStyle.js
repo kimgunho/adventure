@@ -41,4 +41,20 @@ export const globalStyles = css`
     padding: 0;
     margin: 0;
   }
+  input,
+  select,
+  button {
+    cursor: pointer;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+  }
 `;

@@ -16,6 +16,10 @@ export const wrapper = css`
     font-size: 1.125rem;
     margin-bottom: 2rem;
     ${FontsatoshiBold};
+
+    ${TABLET} {
+      font-size: 15px;
+    }
   }
 
   > p {
@@ -24,7 +28,7 @@ export const wrapper = css`
     padding-bottom: 5rem;
 
     ${TABLET} {
-      font-size: 1.8rem;
+      font-size: 20px;
     }
   }
 
@@ -34,14 +38,15 @@ export const wrapper = css`
     justify-content: center;
 
     > span {
-      border-bottom: 5px solid #fff;
+      border-bottom: 3px solid #fff;
       padding-bottom: 0.2rem;
       padding-right: 1rem;
       font-size: 3.75rem;
       ${FontsatoshiMedium};
 
       ${TABLET} {
-        font-size: 2rem;
+        font-size: 24px;
+        border-bottom-width: 2px;
       }
     }
 

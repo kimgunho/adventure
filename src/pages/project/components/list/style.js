@@ -9,7 +9,7 @@ export const headerContainer = css`
   box-sizing: border-box;
 
   ${TABLET} {
-    padding: 5rem 2rem;
+    padding: 5rem 2rem 0rem;
   }
 `;
 
@@ -17,6 +17,10 @@ export const title = css`
   font-size: 4.25rem;
   color: #1f1f1f;
   ${FontsatoshiBlack};
+
+  ${TABLET} {
+    font-size: 40px;
+  }
 `;
 
 export const nav = css`
@@ -40,6 +44,10 @@ export const nav = css`
     justify-content: center;
     margin: 0 1rem 1rem 0;
     ${FontsatoshiBold};
+
+    ${TABLET} {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -108,19 +116,30 @@ export const imageBox = css`
     width: 100%;
     filter: grayscale(100%);
     transition: all 0.2s ease;
+
+    ${TABLET} {
+      filter: grayscale(0%);
+    }
   }
 `;
 
 export const displayImageBox = css`
   overflow: hidden;
   border-radius: 1rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
   height: 100%;
   filter: grayscale(100%);
   transition: all 0.2s ease;
+  line-height: 0;
+
+  ${TABLET} {
+    filter: grayscale(0%);
+  }
+
+  > img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const infoBox = css`
@@ -134,6 +153,9 @@ export const infoBox = css`
 
   ${TABLET} {
     text-align: left;
+    position: initial;
+    transform: translate(0, 0);
+    margin: 1rem 0;
   }
   > p {
     font-size: 0.875rem;
@@ -141,8 +163,9 @@ export const infoBox = css`
     margin-bottom: 5px;
 
     ${TABLET} {
-      /* font-size: 14px; */
-      /* line-height: 3; */
+      font-size: 14px;
+      color: #0f0f0f;
+      margin-bottom: 8px;
     }
   }
   > h3 {
@@ -151,7 +174,8 @@ export const infoBox = css`
     color: #fff;
 
     ${TABLET} {
-      /* font-size: 1.25rem; */
+      font-size: 18px;
+      color: #222;
     }
   }
 `;
@@ -174,7 +198,8 @@ export const topDisplay = css`
   }
 
   ${TABLET} {
-    width: 100%;
+    width: 98%;
+    margin: 0.5rem auto 2rem;
   }
 `;
 
@@ -226,6 +251,12 @@ export const moreButton = css`
   margin: 3rem auto 10rem;
   ${FontsatoshiBold};
 
+  ${TABLET} {
+    padding: 2rem 4rem;
+    border-radius: 3rem;
+    font-size: 20px;
+  }
+
   > span {
     padding-right: 1rem;
   }
@@ -243,4 +274,8 @@ export const imgDimmed = css`
   z-index: 10;
   background-image: linear-gradient(to top, #000 0%, transparent 90%);
   transition: all 0.2s ease;
+
+  ${TABLET} {
+    display: none;
+  }
 `;

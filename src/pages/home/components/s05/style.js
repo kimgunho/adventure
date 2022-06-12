@@ -126,6 +126,7 @@ export const mailInfoData = css`
     ${TABLET} {
       padding: 3rem 0 2rem;
       font-size: 2.4rem;
+      border-bottom: 2px solid #222;
     }
   }
 `;

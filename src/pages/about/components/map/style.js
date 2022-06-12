@@ -32,6 +32,10 @@ export const info = css`
     font-size: 2.5rem;
     line-height: 1.6;
     font-weight: 600;
+
+    ${TABLET} {
+      font-size: 30px;
+    }
   }
 
   > a {
@@ -41,6 +45,10 @@ export const info = css`
     ${FontsatoshiMedium};
     padding-top: 2rem;
     display: block;
+
+    ${TABLET} {
+      font-size: 30px;
+    }
   }
 `;
 

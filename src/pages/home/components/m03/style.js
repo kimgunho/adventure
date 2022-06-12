@@ -23,12 +23,9 @@ export const container = css`
 `;
 
 export const textFrameContainer = css`
-  padding: 6.75rem 5.625rem;
-  box-sizing: border-box;
+  padding: 5rem 2rem;
 
-  ${TABLET} {
-    padding: 5rem 2rem;
-  }
+  box-sizing: border-box;
 `;
 
 export const title = css`
@@ -39,7 +36,7 @@ export const title = css`
 `;
 
 export const rightText = css`
-  font-size: 5vw;
+  font-size: 34px;
   color: #222;
   line-height: 1.8;
   font-weight: 600;
@@ -47,7 +44,7 @@ export const rightText = css`
   white-space: nowrap;
   display: inline-block;
   width: 100%;
-  height: 8vw;
+  height: 60px;
 
   > span {
     position: absolute;
@@ -79,24 +76,13 @@ export const autoSliderWrapper = css`
   overflow: hidden;
   padding: 2rem 0;
   width: 200%;
-  animation: ${bannermove} 10s linear infinite;
-
-  ${TABLET} {
-    width: 300%;
-  }
-  ${MOBILE} {
-    width: 400%;
-  }
+  animation: ${bannermove} 5s linear infinite;
 `;
 
 export const slideCSS = css`
-  width: 33.333334%;
+  width: 50%;
   padding: 0 2rem;
   box-sizing: border-box;
-
-  ${TABLET} {
-    width: 50%;
-  }
 
   > img {
     width: 100%;

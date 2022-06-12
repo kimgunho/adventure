@@ -47,7 +47,6 @@ const S02 = () => {
         transform: `translateY(-${projectRef.current.clientHeight - window.innerHeight + 200}px)`,
       });
     }, 1000);
-    console.log("again");
   }, [window.innerWidth]);
 
   useEffect(() => {

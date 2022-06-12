@@ -105,7 +105,7 @@ const M03 = () => {
         </p>
       </div>
       <div css={autoSliderWrapper}>
-        {Array.from(Array(8)).map((_, index) => (
+        {Array.from(Array(2)).map((_, index) => (
           <div key={index} css={slideCSS}>
             <img src={authImage} alt="" />
           </div>

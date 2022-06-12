@@ -68,10 +68,12 @@ export const mainProject = css`
       border-radius: 1rem;
       position: relative;
       overflow: hidden;
+      line-height: 0;
 
       > img {
         width: 100%;
         object-fit: contain;
+        filter: grayscale(100%);
       }
       > p {
         position: absolute;
@@ -79,11 +81,12 @@ export const mainProject = css`
         bottom: 2rem;
         font-size: 1.5rem;
         color: #fff;
+        z-index: 10;
       }
     }
     > h3 {
       color: #000;
-      font-size: 2rem;
+      font-size: 18px;
       line-height: 2;
     }
   }
@@ -102,11 +105,13 @@ export const projectList = css`
         width: 100%;
         border-radius: 1rem;
         position: relative;
+        line-height: 0;
         overflow: hidden;
 
         > img {
           width: 100%;
           object-fit: contain;
+          filter: grayscale(100%);
         }
         > p {
           position: absolute;
@@ -114,13 +119,25 @@ export const projectList = css`
           bottom: 2rem;
           font-size: 1.5rem;
           color: #fff;
+          z-index: 10;
         }
       }
       > h3 {
         color: #000;
-        font-size: 2rem;
+        font-size: 18px;
         line-height: 2;
       }
     }
   }
+`;
+
+export const imgDimmed = css`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-image: linear-gradient(to top, #000 0%, transparent 90%);
+  transition: all 0.2s ease;
 `;

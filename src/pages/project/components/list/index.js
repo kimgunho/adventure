@@ -149,13 +149,13 @@ const List = () => {
           <div css={topDisplay}>
             <Link to={`/project/${mainDisplay?.category}/${mainDisplay?.id}`}>
               <div css={imgDimmed} className="imgDimmed" />
-              <div
-                className="displayImage"
-                css={displayImageBox}
-                style={{
-                  backgroundImage: `url(https://img.youtube.com/vi/${mainDisplay?.youtube}/maxresdefault.jpg)`,
-                }}
-              ></div>
+              <div className="displayImage" css={displayImageBox}>
+                <img
+                  src={`https://img.youtube.com/vi/${mainDisplay?.youtube}/maxresdefault.jpg`}
+                  alt=""
+                />
+              </div>
+
               <div css={infoBox}>
                 <p>{mainDisplay?.client}</p>
                 <h3>{mainDisplay?.title}</h3>

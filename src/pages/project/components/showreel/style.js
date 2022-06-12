@@ -10,7 +10,7 @@ export const showRealWrapper = css`
   background-color: #f7f7f7;
 
   ${TABLET} {
-    min-height: 70vh;
+    min-height: 100vh;
   }
 `;
 

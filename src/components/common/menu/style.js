@@ -63,7 +63,7 @@ export const mailList = css`
     > a {
       font-size: 2rem;
       padding-bottom: 0.5rem;
-      border-bottom: 2px solid #fff;
+      border-bottom: 3px solid #fff;
     }
   }
 `;

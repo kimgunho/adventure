@@ -4,6 +4,7 @@ import arrow_down_icon from "../../../../assets/images/home/arrow_down_icon.png"
 import playButton from "../../../../assets/images/home/playIcon.png";
 
 import VIDEO from "../../../../assets/video/home.mp4";
+import introVideoThumImg from "../../../../assets/images/home/introVideoThum.jpg";
 
 import { container, title, sectionDown, mobileVideo, playButtonCSS } from "./style";
 
@@ -35,7 +36,7 @@ const M01 = () => {
         <button css={playButtonCSS(isClick)} type="button" onClick={playVideo}>
           <img src={playButton} alt="play video" />
         </button>
-        <video ref={videoRef}>
+        <video ref={videoRef} poster={introVideoThumImg}>
           <source src={VIDEO} type="video/mp4" />
         </video>
       </div>

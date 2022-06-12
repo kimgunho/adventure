@@ -18,7 +18,7 @@ const Home = () => {
     <div>
       <S01 />
       <M01 />
-      <div style={{ overflow: "hidden" }}>
+      <div style={{ overflow: "hidden", width: "100%", height: "100vh" }}>
         <S02 />
       </div>
       <M02 />

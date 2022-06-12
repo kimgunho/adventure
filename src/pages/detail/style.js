@@ -19,6 +19,10 @@ export const detailHeader = css`
     color: #1f1f1f;
     line-height: 2;
     ${FontsatoshiBold};
+
+    ${TABLET} {
+      font-size: 16px;
+    }
   }
 
   > h2 {
@@ -27,7 +31,7 @@ export const detailHeader = css`
     font-weight: 600;
 
     ${TABLET} {
-      font-size: 3rem;
+      font-size: 30px;
     }
   }
 `;
@@ -86,6 +90,10 @@ export const desc = css`
     line-height: 1.8;
     font-weight: 600;
     word-break: keep-all;
+
+    ${TABLET} {
+      font-size: 16px;
+    }
   }
 `;
 

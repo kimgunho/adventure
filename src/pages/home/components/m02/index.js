@@ -14,6 +14,7 @@ import {
   title,
   desc,
   linkButton,
+  imgDimmed,
 } from "./style";
 
 const M02 = () => {
@@ -50,6 +51,7 @@ const M02 = () => {
         <div css={mainProject}>
           <Link to={`/project/${mainDisplay.category}/${mainDisplay.id}`}>
             <div>
+              <div css={imgDimmed} className="imgDimmed" />
               <img
                 src={`https://img.youtube.com/vi/${mainDisplay.youtube}/maxresdefault.jpg`}
                 alt=""
@@ -66,11 +68,12 @@ const M02 = () => {
                 <li key={item.id}>
                   <Link to={`/project/${item.category}/${item.id}`}>
                     <div>
+                      <div css={imgDimmed} className="imgDimmed" />
                       <img
                         src={`https://img.youtube.com/vi/${item.youtube}/maxresdefault.jpg`}
                         alt={item.title}
                       />
-                      <p>{item.kind}</p>
+                      <p>{item.category}</p>
                     </div>
                     <h3>{item.title}</h3>
                   </Link>
