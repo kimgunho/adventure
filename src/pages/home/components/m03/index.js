@@ -26,27 +26,27 @@ const M03 = () => {
   const scrollAnimation = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".s3Contianer",
+        trigger: ".m3Contianer",
         pin: false,
-        start: "10% center",
-        end: "center+=100px center",
+        start: "top top",
+        end: "bottom center",
         scrub: true,
         markers: false,
       },
     });
-    tl.to(".text01", { width: "auto" }, 0);
-    tl.to(".text02", { width: "auto" }, 0.2);
-    tl.to(".text03", { width: "auto" }, 0.4);
-    tl.to(".text04", { width: "auto" }, 0.6);
-    tl.to(".text05", { width: "auto" }, 0.8);
-    tl.to(".text06", { width: "auto" }, 1);
-    tl.to(".text07", { width: "auto" }, 1.2);
-    tl.to(".text08", { width: "auto" }, 1.4);
-    tl.to(".text09", { width: "auto" }, 1.6);
+    tl.to(".text01", { width: "auto" });
+    tl.to(".text02", { width: "auto" });
+    tl.to(".text03", { width: "auto" });
+    tl.to(".text04", { width: "auto" });
+    tl.to(".text05", { width: "auto" });
+    tl.to(".text06", { width: "auto" });
+    tl.to(".text07", { width: "auto" });
+    tl.to(".text08", { width: "auto" });
+    tl.to(".text09", { width: "auto" });
   };
 
   return (
-    <div css={container} className="s3Contianer">
+    <div css={container} className="m3Contianer">
       <div css={textFrameContainer}>
         <h2 css={title}>Who we are</h2>
         <p css={rightText}>

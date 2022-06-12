@@ -28,18 +28,18 @@ const S03 = () => {
       scrollTrigger: {
         trigger: ".s3Contianer",
         pin: false,
-        start: "10% center",
-        end: "center+=100px center",
+        start: "top top",
+        end: "bottom center",
         scrub: true,
         markers: false,
       },
     });
-    tl.to(".text01", { width: "auto" }, 0);
-    tl.to(".text02", { width: "auto" }, 0.2);
-    tl.to(".text03", { width: "auto" }, 0.4);
-    tl.to(".text04", { width: "auto" }, 0.6);
-    tl.to(".text05", { width: "auto" }, 0.8);
-    tl.to(".text06", { width: "auto" }, 1);
+    tl.to(".text01", { width: "auto" });
+    tl.to(".text02", { width: "auto" });
+    tl.to(".text03", { width: "auto" });
+    tl.to(".text04", { width: "auto" });
+    tl.to(".text05", { width: "auto" });
+    tl.to(".text06", { width: "auto" });
   };
 
   return (
