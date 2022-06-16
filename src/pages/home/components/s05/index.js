@@ -64,9 +64,6 @@ const S04 = () => {
                   <img src={copy_icon} alt="이메일 복사하기" />
                   <p css={[cotyDesc, isSjleeCopy && copySucess]}>copy sucess!</p>
                 </a>
-                {/* <a href="mailto:sjlee@adventure-f.com">
-                  <img src={link_icon} alt="이메일 전송하기" />
-                </a> */}
               </div>
             </li>
             <li>
@@ -89,9 +86,6 @@ const S04 = () => {
                   <img src={copy_icon} alt="이메일 복사하기" />
                   <p css={[cotyDesc, isAfCopy && copySucess]}>copy sucess!</p>
                 </a>
-                {/* <a href="mailto:af@adventure-f.com">
-                  <img src={link_icon} alt="이메일 전송하기" />
-                </a> */}
               </div>
             </li>
           </ul>

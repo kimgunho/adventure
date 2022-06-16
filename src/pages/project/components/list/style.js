@@ -94,12 +94,17 @@ export const topArr = css`
     }
 
     > a {
-      &:hover {
-        img {
-          filter: grayscale(0%);
-        }
-        .imgDimmed {
-          opacity: 0;
+      ${PC_HOVER} {
+        &:hover {
+          img {
+            filter: grayscale(0%);
+          }
+          .imgDimmed {
+            opacity: 0;
+          }
+          .infoBox {
+            opacity: 0;
+          }
         }
       }
     }
@@ -150,6 +155,7 @@ export const infoBox = css`
   bottom: 2.125rem;
   transform: translate(-50%, 0);
   width: 100%;
+  transition: opacity 0.2s ease;
 
   ${TABLET} {
     text-align: left;
@@ -188,12 +194,17 @@ export const topDisplay = css`
   box-sizing: border-box;
   position: relative;
 
-  :hover {
-    .imgDimmed {
-      opacity: 0;
-    }
-    .displayImage {
-      filter: grayscale(0%);
+  ${PC_HOVER} {
+    :hover {
+      .imgDimmed {
+        opacity: 0;
+      }
+      .displayImage {
+        filter: grayscale(0%);
+      }
+      .infoBox {
+        opacity: 0;
+      }
     }
   }
 
@@ -225,12 +236,17 @@ export const bottomArr = css`
     }
 
     > a {
-      &:hover {
-        img {
-          filter: grayscale(0%);
-        }
-        .imgDimmed {
-          opacity: 0;
+      ${PC_HOVER} {
+        :hover {
+          img {
+            filter: grayscale(0%);
+          }
+          .imgDimmed {
+            opacity: 0;
+          }
+          .infoBox {
+            opacity: 0;
+          }
         }
       }
     }
@@ -272,7 +288,7 @@ export const imgDimmed = css`
   width: 100%;
   height: 100%;
   z-index: 10;
-  background-image: linear-gradient(to top, #000 0%, transparent 90%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 30%, transparent 90%);
   transition: all 0.2s ease;
 
   ${TABLET} {

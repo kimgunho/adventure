@@ -125,6 +125,10 @@ export const closeButton = css`
   ${TABLET} {
     right: 2rem;
     top: 2rem;
+
+    > img {
+      max-width: 60px;
+    }
   }
 `;
 
@@ -135,8 +139,9 @@ export const munuList = css`
 
     &:last-of-type {
       margin-bottom: 0;
-      ${TABLET} {
-        justify-content: center;
+
+      > span {
+        opacity: 0;
       }
     }
 

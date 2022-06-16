@@ -60,6 +60,7 @@ const Menu = ({ active, setHandleActive }) => {
             <Link to="/about">ABOUT</Link>
           </li>
           <li>
+            <span>04</span>
             <ul>
               <li>
                 <a href={links.kakao} target={"_blank"} rel="noreferrer">

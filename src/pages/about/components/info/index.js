@@ -1,8 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { links } from "../../../../links";
 import { useRef } from "react";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
+import companyFile from "../../../../assets/file/companyGreePDF.pdf";
 import linkIcon from "../../../../assets/images/about/linkIcon.png";
 import downLoadIcon from "../../../../assets/images/about/downloadIcon.svg";
 import rightIcon from "../../../../assets/images/about/rightIcon.svg";
@@ -10,31 +11,29 @@ import rightIcon from "../../../../assets/images/about/rightIcon.svg";
 import { wrapper, topHeader, title, topBody, bottomBody, bottomDesc, bottomForm } from "./style";
 const Info = () => {
   const formRef = useRef();
-  const nameRef = useRef();
   const emailRef = useRef();
-  const textRef = useRef();
 
-  // const sendEmail = e => {
-  //   e.preventDefault();
-  //   const value = nameRef.current.value;
-  //   /* eslint-disable */
-  //   const reg_email = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+  const sendEmail = e => {
+    e.preventDefault();
+    const value = emailRef.current.value;
+    const reg_email = /^([0-9a-zA-Z_.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
 
-  //   if (!reg_email.test(value)) {
-  //     alert("메일양식이 아닙니다.");
-  //     return false;
-  //   }
+    if (!reg_email.test(value)) {
+      alert("메일양식이 아닙니다.");
+      return false;
+    }
 
-  //   emailjs
-  //     .sendForm("service_c1pz9pc", "template_dfxj2vr", formRef.current, "DANFrNV4TKqMu48p7")
-  //     .then(
-  //       alert("감사합니다 빠른 시일내에 답변을 드리겠습니다."),
-  //       (nameRef.current.value = ""),
-  //       error => {
-  //         console.log(error.text);
-  //       },
-  //     );
-  // };
+    emailjs
+      .sendForm("service_scdkskb", "template_6vdzrxi", formRef.current, "MQXXsXuAlX52PwjGP")
+      .then(
+        result => {
+          alert("감사합니다 빠른 시일내에 답변을 드리겠습니다."), console.log(result.text);
+        },
+        error => {
+          console.log(error.text);
+        },
+      );
+  };
 
   return (
     <>
@@ -75,7 +74,7 @@ const Info = () => {
           </ul>
           <div>
             <p>우리가 한 일을 한 번 보시겠어요?</p>
-            <a href="" download>
+            <a href={companyFile} download>
               <span>회사소개서 다운로드</span>
               <img src={downLoadIcon} alt="" />
             </a>
@@ -108,34 +107,29 @@ const Info = () => {
             </ul>
           </div>
           <div css={bottomForm}>
-            {/* onSubmit={sendEmail} */}
-            <form ref={formRef}>
+            <form ref={formRef} onSubmit={sendEmail}>
               <ul>
                 <li>
-                  <input
-                    name="name"
-                    ref={nameRef}
-                    type="text"
-                    placeholder="회사/이름은 무엇인가요?"
-                  />
+                  <input required name="name" type="text" placeholder="회사/이름은 무엇인가요?" />
                 </li>
                 <li>
                   <input
-                    name="email"
                     ref={emailRef}
+                    required
+                    name="user_email"
                     type="text"
                     placeholder="이메일 주소를 적어주세요."
                   />
                 </li>
                 <li>
                   <textarea
-                    name="text"
-                    ref={textRef}
+                    required
+                    name="message"
                     placeholder="내용을 간단히 적어주세요. 확인 후 곧 연락 드릴게요!"
                   />
                 </li>
               </ul>
-              <button>
+              <button type="submit">
                 <span>메세지 보내기</span>
                 <img src={rightIcon} alt="" />
               </button>

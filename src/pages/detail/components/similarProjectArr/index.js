@@ -26,7 +26,15 @@ const SimilarProjectsArr = ({ category, project, moreSrc }) => {
           </li>
         ))}
       </ul>
-      <Link to={`/project/${moreSrc}`} css={button}>
+      <Link
+        to={`/project/${moreSrc}`}
+        css={button}
+        onClick={() => {
+          setTimeout(() => {
+            window.scrollTo(0, window.innerHeight);
+          }, 10);
+        }}
+      >
         <span>Do you want to see more?</span>
         <img src={arrow_right} alt="" />
       </Link>

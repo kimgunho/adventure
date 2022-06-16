@@ -17,33 +17,6 @@ export const container = css`
   }
 `;
 
-export const line = css`
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 30;
-  transition: opacity 0.2s ease;
-  opacity: 0;
-
-  ${TABLET} {
-    display: none;
-  }
-
-  &.active {
-    opacity: 1;
-  }
-`;
-
-export const percentLine = width => css`
-  width: ${width * 100}%;
-  height: 10px;
-  background-color: #ddd;
-  position: absolute;
-  left: 0;
-  top: 5rem;
-`;
-
 export const info = css`
   background-color: #222;
   padding: 5.625rem;
@@ -105,7 +78,7 @@ export const imgDimmed = css`
   width: 100%;
   height: 100%;
   z-index: 10;
-  background-image: linear-gradient(to top, #000 0%, transparent 90%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 30%, transparent 90%);
   transition: all 0.2s ease;
 `;
 

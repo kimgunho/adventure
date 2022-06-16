@@ -1,6 +1,13 @@
 import { css } from "@emotion/react";
 import { FontsatoshiBold, FontsatoshiRegular } from "../../../assets/styles/fonts";
-import { TABLET } from "../../../assets/styles/mediaQuery";
+import { PC_HOVER, TABLET } from "../../../assets/styles/mediaQuery";
+
+import youtube_icon from "../../../assets/images/footer/youtube_icon.png";
+import insta_icon from "../../../assets/images/footer/insta_icon.png";
+import kakao_icon from "../../../assets/images/footer/kakao_icon.png";
+import youtube_icon_color from "../../../assets/images/header/youtube_icon_color.png";
+import insta_icon_color from "../../../assets/images/header/insta_icon_color.png";
+import kakao_icon_color from "../../../assets/images/header/kakao_icon_color.png";
 
 export const footerWrapper = css`
   background-color: #222;
@@ -85,8 +92,44 @@ export const companyCSContainer = css`
         margin-right: 0;
       }
 
+      :nth-of-type(1) {
+        > a {
+          background-image: url(${youtube_icon});
+          ${PC_HOVER} {
+            :hover {
+              background-image: url(${youtube_icon_color});
+            }
+          }
+        }
+      }
+      :nth-of-type(2) {
+        > a {
+          background-image: url(${insta_icon});
+          ${PC_HOVER} {
+            :hover {
+              background-image: url(${insta_icon_color});
+            }
+          }
+        }
+      }
+      :nth-of-type(3) {
+        > a {
+          background-image: url(${kakao_icon});
+          ${PC_HOVER} {
+            :hover {
+              background-image: url(${kakao_icon_color});
+            }
+          }
+        }
+      }
+
       > a {
         display: block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 3.25rem;
+        height: 3.25rem;
 
         > img {
           width: 100%;
@@ -120,6 +163,12 @@ export const companyCSContainer = css`
     color: #fff;
     font-size: 0.875rem;
     padding-bottom: 0.5rem;
+
+    ${PC_HOVER} {
+      :hover {
+        color: #6600cc;
+      }
+    }
     ${TABLET} {
       display: none;
     }

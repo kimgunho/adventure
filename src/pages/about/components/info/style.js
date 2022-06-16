@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { FontsatoshiBlack, FontsatoshiMedium } from "../../../../assets/styles/fonts";
-import { TABLET } from "../../../../assets/styles/mediaQuery";
+import { PC_HOVER, TABLET } from "../../../../assets/styles/mediaQuery";
 
 export const wrapper = css`
   padding: 0 5.625rem;
@@ -93,6 +93,15 @@ export const topBody = css`
         align-items: center;
         justify-content: flex-start;
 
+        ${PC_HOVER} {
+          :hover {
+            > span {
+              color: #6600cc;
+              border-bottom-color: #6600cc;
+            }
+          }
+        }
+
         > span {
           font-size: 60px;
           color: #1f1f1f;
@@ -140,6 +149,12 @@ export const topBody = css`
       padding: 1rem 2rem;
       box-sizing: border-box;
       background-color: #1f1f1f;
+
+      ${PC_HOVER} {
+        :hover {
+          background-color: #6600cc;
+        }
+      }
 
       > span {
         font-size: 1.5rem;
@@ -210,6 +225,13 @@ export const bottomDesc = css`
           white-space: nowrap;
           ${FontsatoshiMedium};
 
+          ${PC_HOVER} {
+            :hover {
+              color: #6600cc;
+              border-bottom-color: #6600cc;
+            }
+          }
+
           ${TABLET} {
             border-bottom-width: 2px;
           }
@@ -248,6 +270,11 @@ export const bottomForm = css`
           border-bottom: 1px solid #1f1f1f;
           background-color: transparent;
 
+          :focus {
+            outline: 1px solid #6600cc;
+            border-bottom-color: #6600cc;
+          }
+
           ${TABLET} {
             font-size: 16px;
           }
@@ -262,6 +289,10 @@ export const bottomForm = css`
           font-size: 1.5rem;
           color: #666;
           border: 0;
+
+          :focus {
+            outline: 1px solid #6600cc;
+          }
 
           ${TABLET} {
             font-size: 16px;
@@ -281,6 +312,12 @@ export const bottomForm = css`
       background-color: #1f1f1f;
       border: 0;
       cursor: pointer;
+
+      ${PC_HOVER} {
+        :hover {
+          background-color: #6600cc;
+        }
+      }
 
       > span {
         font-size: 1.5rem;

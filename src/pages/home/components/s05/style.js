@@ -4,7 +4,7 @@ import {
   FontsatoshiMedium,
   FontsatoshiRegular,
 } from "../../../../assets/styles/fonts";
-import { TABLET } from "../../../../assets/styles/mediaQuery";
+import { PC_HOVER, TABLET } from "../../../../assets/styles/mediaQuery";
 
 export const container = css`
   min-height: 50vh;
@@ -65,6 +65,12 @@ export const kakaoButton = css`
   font-size: 1.5rem;
   font-weight: 500;
 
+  ${PC_HOVER} {
+    :hover {
+      background-color: #6600cc;
+    }
+  }
+
   ${TABLET} {
     display: none;
   }
@@ -122,6 +128,12 @@ export const mailInfoData = css`
     line-height: 1;
     padding-bottom: 1rem;
     ${FontsatoshiMedium};
+
+    ${PC_HOVER} {
+      :hover {
+        color: #6600cc;
+      }
+    }
 
     ${TABLET} {
       padding: 1rem 0;

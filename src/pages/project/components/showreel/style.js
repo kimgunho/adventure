@@ -16,7 +16,9 @@ export const showRealWrapper = css`
 
 export const frameCSS = active => css`
   width: 80%;
-  height: 70vh;
+  height: 40vw;
+  max-height: 750px;
+  max-width: 1330px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -38,7 +40,7 @@ export const titleCSS = css`
   top: 35%;
   z-index: 10;
   transform: translate(-50%, -50%);
-  font-size: 7.5rem;
+  font-size: 8vw;
   color: #fff;
   ${Fontanton};
 
@@ -49,7 +51,9 @@ export const titleCSS = css`
 
 export const mainBackground = css`
   width: 80%;
-  height: 70vh;
+  height: 40vw;
+  max-height: 750px;
+  max-width: 1330px;
   position: absolute;
   left: 50%;
   top: 50%;

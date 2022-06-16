@@ -8,7 +8,6 @@ import kakao_icon from "../../../assets/images/header/kakao_icon.png";
 import youtube_icon_color from "../../../assets/images/header/youtube_icon_color.png";
 import insta_icon_color from "../../../assets/images/header/insta_icon_color.png";
 import kakao_icon_color from "../../../assets/images/header/kakao_icon_color.png";
-import kakao_icon_yellow from "../../../assets/images/header/kakao.png";
 
 export const header = isBackground => css`
   position: fixed;

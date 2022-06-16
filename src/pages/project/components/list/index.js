@@ -107,7 +107,7 @@ const List = () => {
   };
 
   return (
-    <main css={wrapper}>
+    <main css={wrapper} id="project">
       <section css={headerContainer}>
         <h2 css={title}>PROJECTS</h2>
         <ul css={nav}>
@@ -137,7 +137,7 @@ const List = () => {
                           alt=""
                         />
                       </div>
-                      <div css={infoBox}>
+                      <div css={infoBox} className="infoBox">
                         <p>{project.client}</p>
                         <h3>{project.title}</h3>
                       </div>
@@ -156,7 +156,7 @@ const List = () => {
                 />
               </div>
 
-              <div css={infoBox}>
+              <div css={infoBox} className="infoBox">
                 <p>{mainDisplay?.client}</p>
                 <h3>{mainDisplay?.title}</h3>
               </div>
@@ -177,7 +177,7 @@ const List = () => {
                           alt=""
                         />
                       </div>
-                      <div css={infoBox}>
+                      <div css={infoBox} className="infoBox">
                         <p>{project.client}</p>
                         <h3>{project.title}</h3>
                       </div>

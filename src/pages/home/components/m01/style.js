@@ -84,5 +84,6 @@ export const playButtonCSS = isClick => css`
 
   > img {
     width: 100%;
+    max-width: 70px;
   }
 `;

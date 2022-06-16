@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
-import { extractObject } from "react-slick/lib/utils/innerSliderUtils";
-import { Fontanton, FontsatoshiBold, FontsatoshiMedium } from "../../assets/styles/fonts";
+import { FontsatoshiBold, FontsatoshiMedium } from "../../assets/styles/fonts";
 import { TABLET } from "../../assets/styles/mediaQuery";
 
 export const wrapper = css``;
@@ -41,7 +40,8 @@ export const imageBox = css`
   left: 50%;
   transform: translate(-50%, 0);
   width: 80%;
-  height: 60vh;
+  max-width: 1330px;
+  height: 30vw;
 
   ${TABLET} {
     width: 100%;
@@ -50,7 +50,7 @@ export const imageBox = css`
   > img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 `;
 

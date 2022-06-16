@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { FontsatoshiBold, FontsatoshiMedium } from "../../../../assets/styles/fonts";
-import { TABLET } from "../../../../assets/styles/mediaQuery";
+import { TABLET, PC_HOVER } from "../../../../assets/styles/mediaQuery";
 
 export const wrapper = css`
   background-color: #1f1f1f;
@@ -36,6 +36,15 @@ export const wrapper = css`
     display: flex;
     justify-content: center;
     justify-content: center;
+
+    ${PC_HOVER} {
+      :hover {
+        color: #6600cc;
+        > span {
+          border-bottom-color: #6600cc;
+        }
+      }
+    }
 
     > span {
       border-bottom: 3px solid #fff;

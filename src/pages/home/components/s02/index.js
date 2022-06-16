@@ -12,8 +12,6 @@ import {
   project,
   mainProject,
   projectList,
-  line,
-  percentLine,
   title,
   desc,
   imgDimmed,
@@ -36,7 +34,6 @@ const S02 = () => {
           pin: ".box",
           scrub: true,
           markers: false,
-          toggleClass: { className: "active", targets: [".line"] },
           onUpdate: self => {
             setContainerWidth(self.progress);
           },
@@ -58,9 +55,6 @@ const S02 = () => {
 
   return (
     <section className="s2Contianer" css={container}>
-      <div className="line" css={line}>
-        <div css={percentLine(containerWidth)} />
-      </div>
       <article css={info} className="box">
         <div>
           <h2 css={title}>What we do</h2>

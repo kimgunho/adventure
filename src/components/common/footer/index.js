@@ -2,9 +2,6 @@
 import { links } from "../../../links";
 
 import footer_logo from "../../../assets/images/footer/footer_logo.png";
-import youtube_icon from "../../../assets/images/footer/youtube_icon.png";
-import insta_icon from "../../../assets/images/footer/insta_icon.png";
-import kakao_icon from "../../../assets/images/footer/kakao_icon.png";
 
 import { footerWrapper, companyTitleContainer, companyCSContainer, mobile, pc } from "./style";
 const Footer = () => {
@@ -28,19 +25,13 @@ const Footer = () => {
       <div css={companyCSContainer}>
         <ul>
           <li>
-            <a href={links.youtube} target={"_blank"} rel="noreferrer">
-              <img src={youtube_icon} alt="유튜브 바로가기" />
-            </a>
+            <a href={links.youtube} target={"_blank"} rel="noreferrer"></a>
           </li>
           <li>
-            <a href={links.insta} target={"_blank"} rel="noreferrer">
-              <img src={insta_icon} alt="인스타 바로가기" />
-            </a>
+            <a href={links.insta} target={"_blank"} rel="noreferrer"></a>
           </li>
           <li>
-            <a href={links.kakao} target={"_blank"} rel="noreferrer">
-              <img src={kakao_icon} alt="카카오 바로가기" />
-            </a>
+            <a href={links.kakao} target={"_blank"} rel="noreferrer"></a>
           </li>
         </ul>
         <div>

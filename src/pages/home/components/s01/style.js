@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { Fontanton, FontsatoshiBold, FontsatoshiRegular } from "../../../../assets/styles/fonts";
 import { bounce } from "../../../../assets/styles/animaition";
-import { TABLET } from "../../../../assets/styles/mediaQuery";
+import { PC_HOVER, TABLET } from "../../../../assets/styles/mediaQuery";
 
 export const container = css`
   display: flex;
@@ -24,11 +24,26 @@ export const box = css`
   position: relative;
   z-index: 20;
   width: 100%;
-  height: 20rem;
+  height: 25rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .ko {
+    display: none;
+  }
+
+  ${PC_HOVER} {
+    :hover {
+      .ko {
+        display: block;
+      }
+      .en {
+        display: none;
+      }
+    }
+  }
 `;
 
 export const title = css`
@@ -60,7 +75,10 @@ export const ko = css`
 `;
 
 export const desc = css`
-  margin-top: 2rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
   display: block;
   letter-spacing: 0px;
   font-size: 1.5rem;

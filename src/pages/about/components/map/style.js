@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { FontsatoshiBold, FontsatoshiMedium } from "../../../../assets/styles/fonts";
-import { TABLET } from "../../../../assets/styles/mediaQuery";
+import { PC_HOVER, TABLET } from "../../../../assets/styles/mediaQuery";
 
 export const wrapper = css`
   display: flex;
@@ -45,6 +45,12 @@ export const info = css`
     ${FontsatoshiMedium};
     padding-top: 2rem;
     display: block;
+
+    ${PC_HOVER} {
+      :hover {
+        color: #6600cc;
+      }
+    }
 
     ${TABLET} {
       font-size: 30px;
