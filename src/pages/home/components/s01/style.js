@@ -124,3 +124,62 @@ export const video = css`
   transform: translateX(-50%);
   cursor: pointer;
 `;
+
+export const modalPopUp = isActive => css`
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 20;
+  background-color: #222;
+  padding: 1.875rem;
+  box-sizing: border-box;
+  display: ${isActive ? "flex" : "none"};
+  justify-content: space-between;
+  border-radius: 1rem;
+  min-width: 33.125rem;
+
+  > h3 {
+    font-size: 1.375rem;
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    > span {
+      font-weight: 400;
+      display: block;
+    }
+  }
+  > a {
+    border-radius: 50%;
+    width: 6.25rem;
+    height: 6.25rem;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    margin-right: 1rem;
+
+    > img {
+      padding-top: 0.5rem;
+      width: 100%;
+      max-width: 14px;
+    }
+  }
+
+  > button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > img {
+      width: 1.5rem;
+    }
+  }
+`;
