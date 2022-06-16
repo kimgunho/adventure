@@ -187,8 +187,8 @@ export const infoBox = css`
 `;
 
 export const topDisplay = css`
-  width: 49%;
-  margin: 0.5rem;
+  width: 50%;
+  padding: 0.5%;
   border-radius: 1rem;
   overflow: hidden;
   box-sizing: border-box;
@@ -211,6 +211,14 @@ export const topDisplay = css`
   ${TABLET} {
     width: 98%;
     margin: 0.5rem auto 2rem;
+  }
+
+  > a {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    border-radius: 1rem;
   }
 `;
 
