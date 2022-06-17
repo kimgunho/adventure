@@ -9,22 +9,25 @@ const SimilarProjectsArr = ({ category, project, moreSrc }) => {
     <section css={moreWrapper}>
       <h2 css={title}>MORE {category}</h2>
       <ul css={list}>
-        {project.map((project, index) => (
-          <li key={index}>
-            <Link to={`/project/${project.category}/${project.id}`}>
-              <div css={imageBox}>
-                <img
-                  src={`https://img.youtube.com/vi/${project.youtube}/maxresdefault.jpg`}
-                  alt={project.title}
-                />
-              </div>
-              <div css={info}>
-                <p>{project.client}</p>
-                <h3>{project.title}</h3>
-              </div>
-            </Link>
-          </li>
-        ))}
+        {project.map(
+          (project, index) =>
+            index <= 3 && (
+              <li key={index}>
+                <Link to={`/project/${project.category}/${project.id}`}>
+                  <div css={imageBox}>
+                    <img
+                      src={`https://img.youtube.com/vi/${project.youtube}/maxresdefault.jpg`}
+                      alt={project.title}
+                    />
+                  </div>
+                  <div css={info}>
+                    <p>{project.client}</p>
+                    <h3>{project.title}</h3>
+                  </div>
+                </Link>
+              </li>
+            ),
+        )}
       </ul>
       <Link
         to={`/project/${moreSrc}`}

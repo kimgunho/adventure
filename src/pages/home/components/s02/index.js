@@ -19,7 +19,6 @@ import {
 } from "./style";
 
 const S02 = () => {
-  const [containerWidth, setContainerWidth] = useState(0);
   const [data, setData] = useState([]);
   const [mainDisplay, setMainDisplay] = useState({});
   const projectRef = useRef();
@@ -34,9 +33,6 @@ const S02 = () => {
           pin: ".box",
           scrub: true,
           markers: false,
-          onUpdate: self => {
-            setContainerWidth(self.progress);
-          },
         },
       });
     }, 1000);
@@ -47,10 +43,11 @@ const S02 = () => {
   }, []);
 
   const fetchProject = async () => {
-    const response = await axios.get("../local-json/main_display.json");
-    const { main, data: mainData } = await response.data;
-    setData(mainData);
-    setMainDisplay(main);
+    const response = await axios.get("../local-json/projectArr.json");
+    const { data: projectArr } = await response.data;
+    const showMainHomeItem = await projectArr.filter(project => project.showMainHome);
+    setData(projectArr);
+    setMainDisplay(...showMainHomeItem);
   };
 
   return (
@@ -83,21 +80,24 @@ const S02 = () => {
           </Link>
         </div>
         <ul css={projectList} className="projectArr">
-          {data.map(item => (
-            <li key={item.id}>
-              <Link to={`/project/${item.category}/${item.id}`}>
-                <div>
-                  <div css={imgDimmed} className="imgDimmed" />
-                  <img
-                    src={`https://img.youtube.com/vi/${item.youtube}/maxresdefault.jpg`}
-                    alt={item.title}
-                  />
-                  <p>{item.category}</p>
-                </div>
-                <h3>{item.title}</h3>
-              </Link>
-            </li>
-          ))}
+          {data.map(
+            (item, index) =>
+              index < 8 && (
+                <li key={item.id}>
+                  <Link to={`/project/${item.category}/${item.id}`}>
+                    <div>
+                      <div css={imgDimmed} className="imgDimmed" />
+                      <img
+                        src={`https://img.youtube.com/vi/${item.youtube}/maxresdefault.jpg`}
+                        alt={item.title}
+                      />
+                      <p>{item.category}</p>
+                    </div>
+                    <h3>{item.title}</h3>
+                  </Link>
+                </li>
+              ),
+          )}
         </ul>
       </article>
     </section>

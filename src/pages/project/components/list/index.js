@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 
 import arrowDownIcon from "../../../../assets/images/project/arrow_down_icon.png";
 import arrowUpIcon from "../../../../assets/images/project/arrow_up_icon.png";
@@ -27,124 +27,110 @@ import {
 } from "./style";
 const List = () => {
   const params = useParams();
-  const navigate = useNavigate();
-  const [activeKind, setActiveKind] = useState(params.kind);
   const [count, setCount] = useState(8);
   const [isScrollEnd, setIsScrollEnd] = useState(false);
-  const [data, setData] = useState([]);
-  const [dataLength, setDataLength] = useState(0);
+  const [projectTopArr, setProjectTopArr] = useState([]);
+  const [projectBottomArr, setProjectBottomArr] = useState([]);
   const [mainDisplay, setMainDisplay] = useState({});
+  const [dataLength, setDataLength] = useState(null);
   const [url, setUrl] = useState(params.kind);
-
-  useEffect(() => {
-    dataLength !== 0 && count >= data.length - 3 && setIsScrollEnd(true);
-  }, [count]);
-
-  useEffect(() => {
-    getActiveJson();
-  }, [activeKind]);
+  const location = useLocation();
 
   useEffect(() => {
     fetchProject();
   }, [url]);
 
-  const getActiveJson = () => {
-    switch (params.kind) {
-      case "all":
-        setUrl("../local-json/project_all.json");
-        break;
-      case "brand":
-        setUrl("../local-json/project_brand.json");
-        break;
-      case "commercial":
-        setUrl("../local-json/project_commercial.json");
-        break;
-      case "viral":
-        setUrl("../local-json/project_viral.json");
-        break;
-      case "youtube":
-        setUrl("../local-json/project_youtube.json");
-        break;
-      case "others":
-        setUrl("../local-json/project_others.json");
-        break;
-      default:
-        setUrl("../local-json/project_all.json");
-        break;
+  useEffect(() => {
+    setUrl(params.kind);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (dataLength !== null) {
+      count >= dataLength ? setIsScrollEnd(true) : setIsScrollEnd(false);
     }
-  };
+  }, [count, dataLength]);
 
-  const fetchProject = async () => {
-    const response = await axios.get(url);
-    const { main, data } = await response.data;
-    setDataLength(data.length);
-    setData(data);
-    setMainDisplay(main);
-  };
-
-  const onClickActive = (kind, navLink) => {
-    if (kind === activeKind) {
+  const onClickActive = kind => {
+    if (kind === url) {
       return;
     }
-    navigate(navLink);
-    setActiveKind(kind);
+    setUrl(kind);
     setCount(8);
-    setIsScrollEnd(false);
     setTimeout(() => {
       window.scrollTo(0, window.innerHeight);
     }, 10);
   };
 
-  if (!data) {
-    return <div>loading</div>;
-  }
-
-  const bodyData = data?.filter((item, index) => index > 3);
-
   const handleIncreaseCount = () => {
+    if (count >= dataLength) {
+      setIsScrollEnd(true);
+      return;
+    }
+
     setCount(prev => prev + 8);
-    return;
+  };
+
+  const fetchProject = async () => {
+    const response = await axios.get("../local-json/projectArr.json");
+    const { data } = await response.data;
+
+    if (url === "all") {
+      const allCategoryShowMain = await data.filter(project => project.showMainHome);
+      const topArr = await data.filter((project, index) => index <= 3);
+      const bottmArr = await data.filter((project, index) => index >= 4);
+      setDataLength(bottmArr.length);
+      setMainDisplay(allCategoryShowMain[0]);
+      setProjectTopArr(topArr);
+      setProjectBottomArr(bottmArr);
+    } else {
+      const filterCategoty = await data.filter(project => project.category === url);
+      const showMain = await filterCategoty.filter(project => project.showMain);
+      const filterTopArr = await filterCategoty.filter((project, index) => index <= 3);
+      const filterBottomArr = await filterCategoty.filter((project, index) => index >= 4);
+      setDataLength(filterBottomArr.length);
+      setMainDisplay(showMain[0]);
+      setProjectTopArr(filterTopArr);
+      setProjectBottomArr(filterBottomArr);
+    }
   };
 
   return (
     <main css={wrapper} id="project">
       <section css={headerContainer}>
         <h2 css={title}>PROJECTS</h2>
-        <ul css={nav}>
-          {menuArr.map((menu, index) => (
-            <li
-              onClick={() => onClickActive(menu.query, `/project/${menu.query}`)}
-              css={activeKind === menu.query && active}
-              key={index}
+        <nav css={nav}>
+          {menuArr.map(menu => (
+            <Link
+              to={`/project/${menu.query}`}
+              onClick={() => onClickActive(menu.query)}
+              css={url === menu.query && active}
+              key={menu.title}
             >
               {menu.title}
-            </li>
+            </Link>
           ))}
-        </ul>
+        </nav>
       </section>
       <section css={bodyContainer}>
         <div css={projectTopContainer}>
           <ul css={topArr}>
-            {data?.map(
-              (project, index) =>
-                index < 4 && (
-                  <li key={project.id}>
-                    <Link to={`/project/${project.category}/${project.id}`}>
-                      <div css={imageBox}>
-                        <div css={imgDimmed} className="imgDimmed" />
-                        <img
-                          src={`https://img.youtube.com/vi/${project.youtube}/maxresdefault.jpg`}
-                          alt=""
-                        />
-                      </div>
-                      <div css={infoBox} className="infoBox">
-                        <p>{project.client}</p>
-                        <h3>{project.title}</h3>
-                      </div>
-                    </Link>
-                  </li>
-                ),
-            )}
+            {projectTopArr?.map(project => (
+              <li key={project.id}>
+                <Link to={`/project/${project.category}/${project.id}`}>
+                  <div css={imageBox}>
+                    <div css={imgDimmed} className="imgDimmed" />
+                    <img
+                      src={`https://img.youtube.com/vi/${project.youtube}/maxresdefault.jpg`}
+                      alt=""
+                    />
+                  </div>
+                  <div css={infoBox} className="infoBox">
+                    <p>{project.client}</p>
+                    <h3>{project.title}</h3>
+                  </div>
+                </Link>
+              </li>
+            ))}
           </ul>
           <div css={topDisplay}>
             <Link to={`/project/${mainDisplay?.category}/${mainDisplay?.id}`}>
@@ -165,7 +151,7 @@ const List = () => {
         </div>
         <div css={projectBottomContainer}>
           <ul css={bottomArr}>
-            {bodyData?.map(
+            {projectBottomArr?.map(
               (project, index) =>
                 index < count && (
                   <li key={project.id}>

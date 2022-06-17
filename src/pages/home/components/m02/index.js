@@ -26,10 +26,11 @@ const M02 = () => {
   }, []);
 
   const fetchProject = async () => {
-    const response = await axios.get("../local-json/main_display.json");
-    const { main, data: mainData } = await response.data;
-    setData(mainData);
-    setMainDisplay(main);
+    const response = await axios.get("../local-json/projectArr.json");
+    const { data: projectArr } = await response.data;
+    const showMainHomeItem = await projectArr.filter(project => project.showMainHome);
+    setData(projectArr);
+    setMainDisplay(...showMainHomeItem);
   };
 
   return (

@@ -29,7 +29,7 @@ export const nav = css`
   margin-top: 4rem;
   flex-wrap: wrap;
 
-  > li {
+  > a {
     cursor: pointer;
     margin-right: 1rem;
     background-color: #fff;

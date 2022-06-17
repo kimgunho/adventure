@@ -46,52 +46,44 @@ const Detail = () => {
   const [detail, setDetail] = useState({});
   const [moreData, setMoreData] = useState([]);
   const [isFrameActive, setIsFrameActive] = useState(false);
-  const [state, setState] = useState({ category: "", url: "" });
   const sliderContainerRef = useRef();
 
   useEffect(() => {
-    getCategory();
+    fetchDetail();
   }, []);
-
-  useEffect(() => {
-    fetchProject();
-  }, [state]);
 
   const getCategory = () => {
     switch (params.kind) {
       case "brand":
-        setState({ category: "Brand Film", url: "../../local-json/project_brand.json" });
-        break;
+        return "Brand Film";
       case "commercial":
-        setState({ category: "Commercial film", url: "../../local-json/project_commercial.json" });
-        break;
+        return "Commercial film";
       case "viral":
-        setState({ category: "Viral video", url: "../../local-json/project_viral.json" });
-        break;
+        return "Viral video";
       case "youtube":
-        setState({ category: "Youtube", url: "../../local-json/project_youtube.json" });
-        break;
+        return "Youtube";
       case "others":
-        setState({ category: "Others", url: "../../local-json/project_others.json" });
-        break;
+        return "Others";
       default:
         break;
     }
   };
 
-  const fetchProject = async () => {
-    const response = await axios.get(state.url);
-    const { main, data } = await response.data;
-    const filterData = await data.filter((item, index) => index < 4);
-    const currentData = await data.filter(item => item.id === Number(params.id));
-    Number(params.id) === 0 ? setDetail(main) : setDetail(currentData[0]);
-    setMoreData(filterData);
+  const fetchDetail = async () => {
+    const response = await axios.get("../../local-json/projectArr.json");
+    const { data } = await response.data;
+    const similarItems = await data.filter(item => item.category === params.kind);
+    const currentItem = await data.filter(
+      item => String(item.id) === params.id && item.category === params.kind,
+    );
+    setMoreData(similarItems);
+    setDetail(...currentItem);
   };
 
   return (
     <main css={wrapper}>
       <header css={detailHeader}>
-        <p>{state.category}</p>
+        <p>{getCategory()}</p>
         <h2>{detail.title}</h2>
       </header>
       <section>
@@ -162,7 +154,7 @@ const Detail = () => {
           </button>
         </div>
       </section>
-      <SimilarProjectsArr project={moreData} category={state.category} moreSrc={params.kind} />
+      <SimilarProjectsArr project={moreData} category={getCategory()} moreSrc={params.kind} />
     </main>
   );
 };
