@@ -82,7 +82,7 @@ const S01 = () => {
           to="/about"
           onClick={() => {
             setTimeout(() => {
-              window.scrollTo(0, window.innerHeight + 300);
+              window.scrollTo(0, 1426);
             }, 10);
           }}
         >
