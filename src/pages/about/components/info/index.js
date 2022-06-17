@@ -81,7 +81,7 @@ const Info = () => {
           </div>
         </div>
       </section>
-      <section css={wrapper}>
+      <section css={wrapper} id="contact">
         <h3 css={title}>Contact us</h3>
         <div css={bottomBody}>
           <div css={bottomDesc}>

@@ -28,7 +28,7 @@ const S03 = () => {
       scrollTrigger: {
         trigger: ".s3Contianer",
         pin: false,
-        start: "top top",
+        start: "top center",
         end: "bottom center",
         scrub: true,
         markers: false,

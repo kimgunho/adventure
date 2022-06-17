@@ -296,7 +296,7 @@ export const imgDimmed = css`
   width: 100%;
   height: 100%;
   z-index: 10;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 30%, transparent 90%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 30%, transparent 90%);
   transition: all 0.2s ease;
 
   ${TABLET} {

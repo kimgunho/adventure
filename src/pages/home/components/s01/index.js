@@ -47,18 +47,10 @@ const S01 = () => {
       {
         width: "80%",
         y: "-50%",
-        onComplete: () => {
-          playVideo("vid");
-        },
       },
       0,
     );
     tl.to(".dimmed", { opacity: 1 }, 0);
-  };
-
-  const playVideo = vid => {
-    const video = document.getElementById(vid);
-    video.play();
   };
 
   return (
@@ -85,7 +77,7 @@ const S01 = () => {
         <img src={arrow_down_icon} alt="" />
       </div>
 
-      <video id="vid" muted loop css={video} className="video">
+      <video muted loop css={video} className="video">
         <source src={VIDEO} type="video/mp4" />
       </video>
 
@@ -96,7 +88,14 @@ const S01 = () => {
           <br />
           수행기관 선정
         </h3>
-        <Link to="/about">
+        <Link
+          to="/about"
+          onClick={() => {
+            setTimeout(() => {
+              window.scrollTo(0, window.innerHeight + 300);
+            }, 10);
+          }}
+        >
           문의하기
           <img src={arrow_right_icon} alt="문의하기" />
         </Link>
