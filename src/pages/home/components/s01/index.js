@@ -57,19 +57,9 @@ const S01 = () => {
     <section className="s1Contianer" css={container}>
       <div css={box}>
         <h2 className="title" css={title}>
-          <span className="en" css={en}>
-            ADVENTURE FRAME
-          </span>
-          <span className="ko" css={ko}>
-            어드벤처 프레임
-          </span>
+          <span css={en}>ADVENTURE FRAME</span>
         </h2>
-        <p className="en" css={desc}>
-          We make what you EXACTLY need
-        </p>
-        <p className="ko" css={desc}>
-          당신이 필요한 바로 그 영상을 만듭니다
-        </p>
+        <p css={desc}>당신이 필요한 바로 그 영상을 만듭니다</p>
       </div>
 
       <div css={sectionDown}>

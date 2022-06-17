@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { Fontanton, FontsatoshiBold, FontsatoshiRegular } from "../../../../assets/styles/fonts";
 import { bounce } from "../../../../assets/styles/animaition";
-import { PC_HOVER, TABLET } from "../../../../assets/styles/mediaQuery";
+import { TABLET } from "../../../../assets/styles/mediaQuery";
 
 export const container = css`
   display: flex;
@@ -29,21 +29,6 @@ export const box = css`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  .ko {
-    display: none;
-  }
-
-  ${PC_HOVER} {
-    :hover {
-      .ko {
-        display: block;
-      }
-      .en {
-        color: transparent;
-      }
-    }
-  }
 `;
 
 export const title = css`
