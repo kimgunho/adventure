@@ -40,7 +40,7 @@ export const box = css`
         display: block;
       }
       .en {
-        display: none;
+        color: transparent;
       }
     }
   }
