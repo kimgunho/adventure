@@ -67,7 +67,7 @@ const S01 = () => {
         <img src={arrow_down_icon} alt="" />
       </div>
 
-      <video muted loop css={video} className="video">
+      <video muted autoPlay playsinline loop css={video} className="video">
         <source src={VIDEO} type="video/mp4" />
       </video>
 
