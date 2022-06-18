@@ -80,6 +80,8 @@ const Detail = () => {
     setDetail(...currentItem);
   };
 
+  fetchDetail();
+
   return (
     <main css={wrapper}>
       <header css={detailHeader}>
