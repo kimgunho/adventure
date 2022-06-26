@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import axios from "axios";
@@ -17,10 +17,10 @@ import {
   imgDimmed,
   linkButton,
 } from "./style";
+import { convertDash, convertUnderscore } from "../../../../utils";
 
 const S02 = () => {
-  const [data, setData] = useState([]);
-  const [mainDisplay, setMainDisplay] = useState({});
+  const [projects, setProjects] = useState();
   const projectRef = useRef();
 
   useEffect(() => {
@@ -39,16 +39,21 @@ const S02 = () => {
   }, [window.innerWidth]);
 
   useEffect(() => {
-    fetchProject();
+    axios.get("../projects/data.json").then(response => setProjects(response.data));
   }, []);
 
-  const fetchProject = async () => {
-    const response = await axios.get("../local-json/projectArr.json");
-    const { data: projectArr } = await response.data;
-    const showMainHomeItem = await projectArr.filter(project => project.showMainHome);
-    setData(projectArr);
-    setMainDisplay(...showMainHomeItem);
-  };
+  // 큰 썸네일 프로젝트
+  const bigProject = useMemo(() => {
+    return projects?.find(project => project.isBigOnMain);
+  }, [projects]);
+
+  // 작은 썸네일 프로젝트
+  const smallProjects = useMemo(() => {
+    if (projects) {
+      return projects.filter(project => project.isSmallOnMain);
+    }
+    return [];
+  }, [projects]);
 
   return (
     <section className="s2Contianer" css={container}>
@@ -67,37 +72,42 @@ const S02 = () => {
       </article>
       <article css={project} className="project" ref={projectRef}>
         <div css={mainProject}>
-          <Link to={`/project/${mainDisplay.category}/${mainDisplay.id}`}>
-            <div>
-              <div css={imgDimmed} className="imgDimmed" />
-              <img
-                src={`https://img.youtube.com/vi/${mainDisplay.youtube}/maxresdefault.jpg`}
-                alt=""
-              />
-              <p>{mainDisplay.category}</p>
-            </div>
-            <h3>{mainDisplay.title}</h3>
-          </Link>
+          {bigProject && (
+            <Link
+              to={`/project/${convertDash(bigProject.category)}/${convertUnderscore(
+                bigProject.title,
+              )}`}
+            >
+              <div>
+                <div css={imgDimmed} className="imgDimmed" />
+                <img
+                  src={`https://img.youtube.com/vi/${bigProject.youTubeId}/maxresdefault.jpg`}
+                  alt={bigProject.title}
+                />
+                <p>{bigProject.category}</p>
+              </div>
+              <h3>{bigProject.title}</h3>
+            </Link>
+          )}
         </div>
         <ul css={projectList} className="projectArr">
-          {data.map(
-            (item, index) =>
-              index < 8 && (
-                <li key={item.id}>
-                  <Link to={`/project/${item.category}/${item.id}`}>
-                    <div>
-                      <div css={imgDimmed} className="imgDimmed" />
-                      <img
-                        src={`https://img.youtube.com/vi/${item.youtube}/maxresdefault.jpg`}
-                        alt={item.title}
-                      />
-                      <p>{item.category}</p>
-                    </div>
-                    <h3>{item.title}</h3>
-                  </Link>
-                </li>
-              ),
-          )}
+          {smallProjects.map((project, index) => (
+            <li key={index}>
+              <Link
+                to={`/project/${convertDash(project.category)}/${convertUnderscore(project.title)}`}
+              >
+                <div>
+                  <div css={imgDimmed} className="imgDimmed" />
+                  <img
+                    src={`https://img.youtube.com/vi/${project.youTubeId}/maxresdefault.jpg`}
+                    alt={project.title}
+                  />
+                  <p>{project.category}</p>
+                </div>
+                <h3>{project.title}</h3>
+              </Link>
+            </li>
+          ))}
         </ul>
       </article>
     </section>

@@ -5,18 +5,18 @@ export const menuArr = [
   },
   {
     title: "Brand Film",
-    query: "brand",
+    query: "brand-film",
   },
   {
-    title: "Commercial film",
-    query: "commercial",
+    title: "Commercial Film",
+    query: "commercial-film",
   },
   {
-    title: "Viral video",
-    query: "viral",
+    title: "Viral Video",
+    query: "viral-video",
   },
   {
-    title: "Youtube",
+    title: "YouTube",
     query: "youtube",
   },
   {

@@ -23,6 +23,7 @@ import {
   sliderButton,
   frameButton,
 } from "./style";
+import { convertDash, convertUnderscore } from "../../utils";
 
 const settings = {
   centerPadding: "0px",
@@ -53,12 +54,12 @@ const Detail = () => {
   }, []);
 
   const getCategory = () => {
-    switch (params.kind) {
-      case "brand":
+    switch (params.category) {
+      case "brand-film":
         return "Brand Film";
-      case "commercial":
+      case "commercial-film":
         return "Commercial film";
-      case "viral":
+      case "viral-video":
         return "Viral video";
       case "youtube":
         return "Youtube";
@@ -70,14 +71,15 @@ const Detail = () => {
   };
 
   const fetchDetail = async () => {
-    const response = await axios.get("../../local-json/projectArr.json");
-    const { data } = await response.data;
-    const similarItems = await data.filter(item => item.category === params.kind);
-    const currentItem = await data.filter(
-      item => String(item.id) === params.id && item.category === params.kind,
+    const projects = await axios.get("../../projects/data.json").then(response => response.data);
+    const similarItems = await projects.filter(
+      project => convertDash(project.category) === params.category,
+    );
+    const currentItem = await projects.find(
+      project => convertUnderscore(project.title) === params.title,
     );
     setMoreData(similarItems);
-    setDetail(...currentItem);
+    setDetail(currentItem);
   };
 
   fetchDetail();
@@ -101,7 +103,7 @@ const Detail = () => {
             <Frame src={detail.youtube} title={detail.title} />
           ) : (
             <img
-              src={`https://img.youtube.com/vi/${detail.youtube}/maxresdefault.jpg`}
+              src={`https://img.youtube.com/vi/${detail.youTubeId}/maxresdefault.jpg`}
               alt={detail.title}
             />
           )}
@@ -123,10 +125,6 @@ const Detail = () => {
               <li>
                 <span>PROJECTS CLIENT</span>
                 <span>{detail.client}</span>
-              </li>
-              <li>
-                <span>PROJECTS TYPE</span>
-                <span>{detail.type}</span>
               </li>
               <li>
                 <span>KEY STAFF</span>
@@ -156,7 +154,7 @@ const Detail = () => {
           </button>
         </div>
       </section>
-      <SimilarProjectsArr project={moreData} category={getCategory()} moreSrc={params.kind} />
+      <SimilarProjectsArr project={moreData} category={getCategory()} moreSrc={params.category} />
     </main>
   );
 };
