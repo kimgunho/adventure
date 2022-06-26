@@ -20,8 +20,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/project/:kind" element={<Project />} />
-        <Route path="/project/:kind/:id" element={<Detail />} />
+        <Route path="/project/:category" element={<Project />} />
+        <Route path="/project/:category/:title" element={<Detail />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotPage />} />
       </Routes>

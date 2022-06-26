@@ -25,6 +25,8 @@ import {
   displayImageBox,
   imgDimmed,
 } from "./style";
+import { convertDash, convertUnderscore } from "../../../../utils";
+
 const List = () => {
   const params = useParams();
   const [count, setCount] = useState(8);
@@ -33,7 +35,7 @@ const List = () => {
   const [projectBottomArr, setProjectBottomArr] = useState([]);
   const [mainDisplay, setMainDisplay] = useState({});
   const [dataLength, setDataLength] = useState(null);
-  const [url, setUrl] = useState(params.kind);
+  const [url, setUrl] = useState(params.category);
   const location = useLocation();
 
   useEffect(() => {
@@ -41,7 +43,7 @@ const List = () => {
   }, [url]);
 
   useEffect(() => {
-    setUrl(params.kind);
+    setUrl(params.category);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -50,11 +52,11 @@ const List = () => {
     }
   }, [count, dataLength]);
 
-  const onClickActive = kind => {
-    if (kind === url) {
+  const onClickActive = category => {
+    if (category === url) {
       return;
     }
-    setUrl(kind);
+    setUrl(category);
     setCount(8);
     setTimeout(() => {
       window.scrollTo(0, window.innerHeight);
@@ -71,20 +73,21 @@ const List = () => {
   };
 
   const fetchProject = async () => {
-    const response = await axios.get("../local-json/projectArr.json");
-    const { data } = await response.data;
+    const projects = await axios.get("../projects/data.json").then(response => response.data);
 
     if (url === "all") {
-      const allCategoryShowMain = await data.filter(project => project.showMainHome);
-      const topArr = await data.filter((project, index) => index <= 3);
-      const bottmArr = await data.filter((project, index) => index >= 4);
+      const allCategoryShowMain = await projects.filter(project => project.isBigOnProject);
+      const topArr = await projects.filter((project, index) => index <= 3);
+      const bottmArr = await projects.filter((project, index) => index >= 4);
       setDataLength(bottmArr.length);
       setMainDisplay(allCategoryShowMain[0]);
       setProjectTopArr(topArr);
       setProjectBottomArr(bottmArr);
     } else {
-      const filterCategoty = await data.filter(project => project.category === url);
-      const showMain = await filterCategoty.filter(project => project.showMain);
+      const filterCategoty = await projects.filter(
+        project => convertDash(project.category) === url,
+      );
+      const showMain = await filterCategoty.filter(project => project.isBigOnProject);
       const filterTopArr = await filterCategoty.filter((project, index) => index <= 3);
       const filterBottomArr = await filterCategoty.filter((project, index) => index >= 4);
       setDataLength(filterBottomArr.length);
@@ -114,14 +117,18 @@ const List = () => {
       <section css={bodyContainer}>
         <div css={projectTopContainer}>
           <ul css={topArr}>
-            {projectTopArr?.map(project => (
-              <li key={project.id}>
-                <Link to={`/project/${project.category}/${project.id}`}>
+            {projectTopArr.map((project, index) => (
+              <li key={index}>
+                <Link
+                  to={`/project/${convertDash(project.category)}/${convertUnderscore(
+                    project.title,
+                  )}`}
+                >
                   <div css={imageBox}>
                     <div css={imgDimmed} className="imgDimmed" />
                     <img
-                      src={`https://img.youtube.com/vi/${project.youtube}/maxresdefault.jpg`}
-                      alt=""
+                      src={`https://img.youtube.com/vi/${project.youTubeId}/maxresdefault.jpg`}
+                      alt={project.title}
                     />
                   </div>
                   <div css={infoBox} className="infoBox">
@@ -133,34 +140,44 @@ const List = () => {
             ))}
           </ul>
           <div css={topDisplay}>
-            <Link to={`/project/${mainDisplay?.category}/${mainDisplay?.id}`}>
-              <div css={imgDimmed} className="imgDimmed" />
-              <div className="displayImage" css={displayImageBox}>
-                <img
-                  src={`https://img.youtube.com/vi/${mainDisplay?.youtube}/maxresdefault.jpg`}
-                  alt=""
-                />
-              </div>
+            {mainDisplay && (
+              <Link
+                to={`/project/${convertDash(mainDisplay.category)}/${convertUnderscore(
+                  mainDisplay.title,
+                )}`}
+              >
+                <div css={imgDimmed} className="imgDimmed" />
+                <div className="displayImage" css={displayImageBox}>
+                  <img
+                    src={`https://img.youtube.com/vi/${mainDisplay.youTubeId}/maxresdefault.jpg`}
+                    alt={mainDisplay.title}
+                  />
+                </div>
 
-              <div css={infoBox} className="infoBox">
-                <p>{mainDisplay?.client}</p>
-                <h3>{mainDisplay?.title}</h3>
-              </div>
-            </Link>
+                <div css={infoBox} className="infoBox">
+                  <p>{mainDisplay.client}</p>
+                  <h3>{mainDisplay.title}</h3>
+                </div>
+              </Link>
+            )}
           </div>
         </div>
         <div css={projectBottomContainer}>
           <ul css={bottomArr}>
-            {projectBottomArr?.map(
+            {projectBottomArr.map(
               (project, index) =>
                 index < count && (
-                  <li key={project.id}>
-                    <Link to={`/project/${project.category}/${project.id}`}>
+                  <li key={index}>
+                    <Link
+                      to={`/project/${convertDash(project.category)}/${convertUnderscore(
+                        project.title,
+                      )}`}
+                    >
                       <div css={imageBox}>
                         <div css={imgDimmed} className="imgDimmed" />
                         <img
-                          src={`https://img.youtube.com/vi/${project.youtube}/maxresdefault.jpg`}
-                          alt=""
+                          src={`https://img.youtube.com/vi/${project.youTubeId}/maxresdefault.jpg`}
+                          alt={project.title}
                         />
                       </div>
                       <div css={infoBox} className="infoBox">

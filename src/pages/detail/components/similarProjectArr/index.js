@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import arrow_right from "../../../../assets/images/detail/arrow_right_black.svg";
 
 import { moreWrapper, title, list, imageBox, info, button } from "./style";
+import { convertDash, convertUnderscore } from "../../../../utils";
+
 const SimilarProjectsArr = ({ category, project, moreSrc }) => {
   return (
     <section css={moreWrapper}>
@@ -13,10 +15,14 @@ const SimilarProjectsArr = ({ category, project, moreSrc }) => {
           (project, index) =>
             index <= 3 && (
               <li key={index}>
-                <Link to={`/project/${project.category}/${project.id}`}>
+                <Link
+                  to={`/project/${convertDash(project.category)}/${convertUnderscore(
+                    project.title,
+                  )}`}
+                >
                   <div css={imageBox}>
                     <img
-                      src={`https://img.youtube.com/vi/${project.youtube}/maxresdefault.jpg`}
+                      src={`https://img.youtube.com/vi/${project.youTubeId}/maxresdefault.jpg`}
                       alt={project.title}
                     />
                   </div>
