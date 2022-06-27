@@ -100,7 +100,7 @@ const Detail = () => {
             <img src={playButtonImage} alt="play video" />
           </button>
           {isFrameActive ? (
-            <Frame src={detail.youtube} title={detail.title} />
+            <Frame src={detail.youTubeId} title={detail.title} />
           ) : (
             <img
               src={`https://img.youtube.com/vi/${detail.youTubeId}/maxresdefault.jpg`}
@@ -134,9 +134,9 @@ const Detail = () => {
           </div>
         </div>
         <div css={sliderWrapper}>
-          {detail.images && (
+          {detail.image && (
             <Slider {...settings} ref={sliderContainerRef}>
-              {detail.images.map((imgSrc, index) => (
+              {detail.image.map((imgSrc, index) => (
                 <div key={index} css={sliderImageCSS}>
                   <img src={`${imgSrc}`} alt="" />
                 </div>

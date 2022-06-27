@@ -64,6 +64,12 @@ export const frameButton = active => css`
   transform: translate(-50%, -50%);
   cursor: pointer;
   display: ${active ? "none" : "block"};
+
+  ${TABLET} {
+    > img {
+      width: 60%;
+    }
+  }
 `;
 
 export const info = css`
@@ -110,7 +116,7 @@ export const infoList = css`
     > li {
       border-bottom: 1px solid #1f1f1f;
       display: flex;
-      justify-content: space-between;
+      align-items: center;
       padding: 1.5rem 0;
 
       ${TABLET} {
@@ -121,6 +127,8 @@ export const infoList = css`
         &:first-of-type {
           font-size: 1.25rem;
           color: #222;
+          white-space: nowrap;
+          padding-right: 1rem;
           ${FontsatoshiMedium};
 
           ${TABLET} {

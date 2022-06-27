@@ -88,8 +88,12 @@ const List = () => {
         project => convertDash(project.category) === url,
       );
       const showMain = await filterCategoty.filter(project => project.isBigOnProject);
-      const filterTopArr = await filterCategoty.filter((project, index) => index <= 3);
-      const filterBottomArr = await filterCategoty.filter((project, index) => index >= 4);
+      const filterTopArr = await filterCategoty.filter(
+        (project, index) => index <= 4 && project.isBigOnProject !== true,
+      );
+      const filterBottomArr = await filterCategoty.filter(
+        (project, index) => index >= 5 && project.isBigOnProject !== true,
+      );
       setDataLength(filterBottomArr.length);
       setMainDisplay(showMain[0]);
       setProjectTopArr(filterTopArr);

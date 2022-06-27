@@ -35,6 +35,13 @@ export const list = css`
 
     ${TABLET} {
       width: 100%;
+
+      :nth-of-type(3) {
+        display: none;
+      }
+      :nth-of-type(4) {
+        display: none;
+      }
     }
   }
 `;

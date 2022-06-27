@@ -188,7 +188,7 @@ export const infoBox = css`
 
 export const topDisplay = css`
   width: 50%;
-  padding: 0.5%;
+  padding: 0.5rem;
   border-radius: 1rem;
   overflow: hidden;
   box-sizing: border-box;

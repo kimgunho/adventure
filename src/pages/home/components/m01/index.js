@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import arrow_down_icon from "../../../../assets/images/home/arrow_down_icon.png";
 import playButton from "../../../../assets/images/home/playIcon.png";
 import VIDEO from "../../../../assets/video/home.mp4";
+import placeholder from "../../../../assets/images/home/placeholder.jpg";
 
 import { container, title, sectionDown, mobileVideo, playButtonCSS } from "./style";
 
@@ -35,7 +36,7 @@ const M01 = () => {
         <button css={playButtonCSS(isClick)} type="button" onClick={playVideo}>
           <img src={playButton} alt="play video" />
         </button>
-        <video autoPlay={false} loop muted playsinline={false} ref={videoRef}>
+        <video autoPlay={false} loop muted playsinline={false} ref={videoRef} poster={placeholder}>
           <source src={VIDEO} type="video/mp4" />
         </video>
       </div>
