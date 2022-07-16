@@ -9,22 +9,25 @@ const changeBackgroundImage = imageArr => keyframes`
 1%{
   background-image:url(${imageArr[1]});
 }
-25%{
+33%{
   background-image:url(${imageArr[1]});
 }
-26%{
+34%{
   background-image:url(${imageArr[2]});
 }
-50%{
+66%{
   background-image:url(${imageArr[2]});
 }
-51%{
-  background-image:url(${imageArr[3]});
+67%{
+  background-image:url(${imageArr[0]});
 }
-75%{
-  background-image:url(${imageArr[3]});
+100%{
+  background-image:url(${imageArr[0]});  
 }
-76%{
+`;
+
+const changeBackgroundImageOnlyOne = imageArr => keyframes`
+0%{
   background-image:url(${imageArr[0]});
 }
 100%{
@@ -122,6 +125,18 @@ export const button = imageListArr => css`
       > div {
         display: block;
         animation: ${changeBackgroundImage(imageListArr)} 3s linear infinite;
+      }
+    }
+  }
+`;
+
+export const buttonOnlyOneBackground = imageListArr => css`
+  ${PC_HOVER} {
+    &:hover {
+      text-decoration: underline;
+      > div {
+        display: block;
+        animation: ${changeBackgroundImageOnlyOne(imageListArr)} 3s linear infinite;
       }
     }
   }

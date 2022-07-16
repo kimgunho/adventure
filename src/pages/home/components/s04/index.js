@@ -2,7 +2,15 @@
 import { Link } from "react-router-dom";
 
 import { backgroundObj } from "./constants";
-import { container, title, nav, buttons, button, backgroundCSS } from "./style";
+import {
+  container,
+  title,
+  nav,
+  buttons,
+  button,
+  buttonOnlyOneBackground,
+  backgroundCSS,
+} from "./style";
 const S04 = () => {
   return (
     <section css={container}>
@@ -22,7 +30,7 @@ const S04 = () => {
             </Link>
           </li>
           <li>
-            <Link to="/project/viral" css={button(backgroundObj.viralVideo)}>
+            <Link to="/project/viral" css={buttonOnlyOneBackground(backgroundObj.viralVideo)}>
               Viral video
               <div css={backgroundCSS} />
             </Link>
