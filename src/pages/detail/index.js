@@ -134,7 +134,7 @@ const Detail = () => {
           </div>
         </div>
         <div css={sliderWrapper}>
-          {detail.image && (
+          {detail?.image?.length >= 1 && (
             <Slider {...settings} ref={sliderContainerRef}>
               {detail.image.map((imgSrc, index) => (
                 <div key={index} css={sliderImageCSS}>
@@ -144,14 +144,16 @@ const Detail = () => {
             </Slider>
           )}
 
-          <button css={sliderButton}>
-            <span onClick={() => sliderContainerRef.current?.slickPrev()}>
-              <img src={arrowLeft} alt="prev image" /> prev
-            </span>
-            <span onClick={() => sliderContainerRef.current?.slickNext()}>
-              next <img src={arrowRight} alt="next image" />
-            </span>
-          </button>
+          {detail?.image?.length >= 1 && (
+            <button css={sliderButton}>
+              <span onClick={() => sliderContainerRef.current?.slickPrev()}>
+                <img src={arrowLeft} alt="prev image" /> prev
+              </span>
+              <span onClick={() => sliderContainerRef.current?.slickNext()}>
+                next <img src={arrowRight} alt="next image" />
+              </span>
+            </button>
+          )}
         </div>
       </section>
       <SimilarProjectsArr project={moreData} category={getCategory()} moreSrc={params.category} />
